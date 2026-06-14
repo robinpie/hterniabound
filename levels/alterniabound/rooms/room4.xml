@@ -9,6 +9,7 @@
     <sprite name='room4BG'><animation sheet='room4bg' x='0' y='0'/></sprite>
     <sprite name='genLabTrans2' x='1332.0' y='411.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room1.xml,room1,429,534</args></action></sprite>
     <sprite name='genLabTrans' x='108.0' y='1254.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room4.xml,room4,363,1941</args></action></sprite>
+    <sprite name='genLabChest' x='1350.0' y='1299.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got SOME GLASSES OF FRESH MILK! @! But... what is there to even get milk from around here? @! Oh sweet jegus...</args></action></sprite>
   </room>
 </rooms>
 </sburb>

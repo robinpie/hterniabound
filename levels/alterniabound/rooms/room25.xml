@@ -7,6 +7,9 @@
 <rooms>
   <room name='room25' walkableMap='room25map' mapScale='2' width='681' height='592'>
     <sprite name='room25BG'><animation sheet='room25bg' x='0' y='0'/></sprite>
+    <sprite name='roofFutureTrans' x='87.0' y='339.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room22.xml,room22,927,1794</args></action></sprite>
+    <sprite name='roofFutureChest' x='577.0' y='483.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got the DRAGONSUIT! @! You don your extremely stylish DRAGONSUIT. Now that stubborn Pouncellor will no longer have any excuse to withhold evidence critical to the case of the prosecution!</args></action></sprite>
+    <sprite name='roofFutureScope' x='475.8' y='290.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Take a whiff?'><args>@! The meteor has rotated. Derse is now within sniffing range.</args></action></sprite>
   </room>
 </rooms>
 </sburb>

@@ -7,6 +7,7 @@
 <rooms>
   <room name='room13' walkableMap='room13map' mapScale='2' width='681' height='592'>
     <sprite name='room13BG'><animation sheet='room13bg' x='0' y='0'/></sprite>
+    <sprite name='roofLabTrans' x='87.0' y='339.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room10.xml,room10,927,1794</args></action></sprite>
   </room>
 </rooms>
 </sburb>

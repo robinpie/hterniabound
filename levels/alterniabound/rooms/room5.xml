@@ -7,6 +7,22 @@
 <rooms>
   <room name='room5' walkableMap='room5map' mapScale='2' width='4047' height='3092'>
     <sprite name='room5BG'><animation sheet='room5bg' x='0' y='0'/></sprite>
+    <sprite name='cliffLabTrans1' x='-465.0' y='1920.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room3.xml,room3,1515,1191</args></action></sprite>
+    <sprite name='cliffLabTrans2' x='3171.0' y='2328.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room7.xml,room7,99,735</args></action></sprite>
+    <sprite name='cliffLabChest8' x='2808.0' y='2241.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got HOMES SMELL YA LATER! @! SO FRESH.</args></action></sprite>
+    <sprite name='cliffLabChest7' x='2478.0' y='2241.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a BEAUTIFUL WORK OF FINE ART! @! Just... why. Why would this exist.
+
+Why would someone put it in a chest???</args></action></sprite>
+    <sprite name='cliffLabChest6' x='1656.0' y='1974.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a WICKED ELIXIR! @! You chug the beverage immediately. Your vitals remain unchanged.</args></action></sprite>
+    <sprite name='cliffLabChest5' x='1581.0' y='1974.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a TEAPOT!</args></action></sprite>
+    <sprite name='cliffLabChest4' x='558.0' y='1830.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got A WHOLE MESS OF BOONBUCKS! @! You guess you could use them as paperweights. Or something.</args></action></sprite>
+    <sprite name='cliffLabChest3' x='273.0' y='1833.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a TINKERBULL PLUSH! @! R.I.P. little buddy. :&#x27;(</args></action></sprite>
+    <sprite name='cliffLabChest2' x='198.0' y='1833.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a ~ATH MANUAL! @! It&#x27;s so thick, you could kill someone with this thing.
+
+And if you master what&#x27;s inside, you just might kill everyone with it.</args></action></sprite>
+    <sprite name='cliffLabChest1' x='-105.0' y='1830.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got A WHOLE BOONBUCK! @! Yawn.</args></action></sprite>
+    <sprite name='cliffLabJunk' x='1274.65' y='-299.65' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine.'><args>@! Man, why&#x27;s everybody gotta dump their shit in your secret room? How are they even getting in here??? This is so outrageous.</args></action></sprite>
+    <sprite name='cliffLabHorsaroni' x='1464.0' y='-381.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine.'><args>@! /0x6700c4 _NEIGH_</args></action></sprite>
   </room>
 </rooms>
 </sburb>

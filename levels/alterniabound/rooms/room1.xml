@@ -7,15 +7,54 @@
 <rooms>
   <room name='room1' walkableMap='room1map' mapScale='2' width='1048' height='1113'>
     <sprite name='room1BG'><animation sheet='room1bg' x='0' y='0'/></sprite>
-    <character class='cg' name='cg' x='525' y='500'>
-      <action class='becg'/>
-      <action class='begc'/>
+    <character class='aa' name='aa' x='492' y='276' facing='Back' state='idleBack'>
+      <action command='convo' name='Talk to Aradia.'><args>aa</args></action>
+      <action command='cutscene' name='Be Future Aradia.'><args>aa</args></action>
+    </character>
+    <character class='ac' name='ac' x='717' y='357' facing='Left' state='idleLeft'>
+      <action command='convo' name='Talk to Nepeta.'><args>ac</args></action>
+    </character>
+    <character class='ag' name='ag' x='495' y='822' facing='Front' state='idleFront'>
       <action class='beag'/>
+      <action command='convo' name='Talk to Vriska.'><args>ag</args></action>
+    </character>
+    <character class='at' name='at' x='726' y='552' facing='Front' state='idleFront'>
+      <action command='convo' name='Talk to Tavros.'><args>at</args></action>
+    </character>
+    <character class='ca' name='ca' x='123' y='735' facing='Right' state='idleRight'>
+      <action command='convo' name='Talk to Eridan.'><args>ca</args></action>
+      <action command='cutscene' name='Be Future Eridan.'><args>ca</args></action>
+    </character>
+    <character class='cc' name='cc' x='450' y='369' facing='Left' state='idleLeft'>
+      <action command='convo' name='Talk to Feferi.'><args>cc</args></action>
+      <action command='cutscene' name='Be Future Feferi.'><args>cc</args></action>
+    </character>
+    <character class='cg' name='cg' x='225' y='348' facing='Front' state='idleFront'>
+      <action class='becg'/>
+      <action command='convo' name='Talk to Karkat.'><args>cg</args></action>
+    </character>
+    <character class='ct' name='ct' x='645' y='639' facing='Back' state='idleBack'>
+      <action command='convo' name='Talk to Equius.'><args>ct</args></action>
+    </character>
+    <character class='ga' name='ga' x='366' y='822' facing='Front' state='idleFront'>
+      <action command='convo' name='Talk to Kanaya.'><args>ga</args></action>
+      <action command='cutscene' name='Be Future Kanaya.'><args>ga</args></action>
+    </character>
+    <character class='gc' name='gc' x='132' y='483' facing='Right' state='idleRight'>
+      <action class='begc'/>
+      <action command='convo' name='Talk to Terezi.'><args>gc</args></action>
+    </character>
+    <character class='ta' name='ta' x='360' y='273' facing='Back' state='idleBack'>
+      <action command='convo' name='Talk to Sollux.'><args>ta</args></action>
+    </character>
+    <character class='tc' name='tc' x='360' y='687' facing='Front' state='idleFront'>
+      <action command='convo' name='Talk to Gamzee.'><args>tc</args></action>
     </character>
     <sprite name='crossLabTrans1' x='525.0' y='666.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room1.xml,room1,429,534</args></action></sprite>
     <sprite name='crossLabTrans2' x='525.0' y='345.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room3.xml,room3,1215,1239</args></action></sprite>
     <sprite name='crossLabTrans3' x='525.0' y='981.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room4.xml,room4,885,417</args></action></sprite>
     <sprite name='crossLabChest2' x='837.0' y='672.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got the trusty CLAWSICKLE!</args></action></sprite>
+    <sprite name='crossLabChest1' x='225.0' y='672.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got SOME BOONDOLLARS! @! Who cares.</args></action></sprite>
   </room>
 </rooms>
 </sburb>

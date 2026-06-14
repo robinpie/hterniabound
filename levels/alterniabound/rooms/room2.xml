@@ -8,6 +8,9 @@
   <room name='room2' walkableMap='room2map' mapScale='2' width='1786' height='1777'>
     <sprite name='room2BG'><animation sheet='room2bg' x='0' y='0'/></sprite>
     <sprite name='transLabTrans1' x='1215.0' y='1239.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,525,345</args></action></sprite>
+    <sprite name='transLabTrans5' x='1515.0' y='1191.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room6.xml,room6,-465,1920</args></action></sprite>
+    <sprite name='transLabTrans8' x='1317.0' y='1509.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,672,2907</args></action></sprite>
+    <sprite name='transLabTrans9' x='1131.0' y='1512.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room15.xml,room15,2478,534</args></action></sprite>
   </room>
 </rooms>
 </sburb>

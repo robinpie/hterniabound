@@ -8,6 +8,10 @@
   <room name='room20' walkableMap='room20map' mapScale='2' width='927' height='1005'>
     <sprite name='room20BG'><animation sheet='room20bg' x='0' y='0'/></sprite>
     <sprite name='boonLabDoor2' x='511.35' y='303.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room20.xml,room20,510,1002</args></action></sprite>
+    <sprite name='boonFutureBoonPile' x='345.0' y='348.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine former boondollar pile.'><args>@! You gave all your money to John. Gotta keep him competitive with Dave! John will be the best human boy there is. You will make sure of it.</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,420,272,182,61</args><action command='changeRoomRemote'><args>rooms/room20.xml,room20,510,1002</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

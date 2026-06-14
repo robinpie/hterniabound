@@ -7,7 +7,13 @@
 <rooms>
   <room name='room21' walkableMap='room21map' mapScale='2' width='2526' height='1861'>
     <sprite name='room21BG'><animation sheet='room21bg' x='0' y='0'/></sprite>
+    <sprite name='GCFutureTrans' x='927.0' y='1794.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room26.xml,room26,87,339</args></action></sprite>
     <sprite name='GCFutureDoor' x='333.0' y='1237.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room24.xml,room24,669,231</args></action></sprite>
+    <sprite name='GCFutureChest4' x='1257.0' y='1602.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got some GIFT ART FROM A COOL FRIEND!</args></action></sprite>
+    <sprite name='GCFuturePC' x='335.0' y='588.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open doors.'><args>@! The doors are jammed from overuse. That&#x27;s what you get for hording so much useless bullshit in your private chests!</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,277,1206,110,61</args><action command='changeRoomRemote'><args>rooms/room24.xml,room24,669,231</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

@@ -7,6 +7,7 @@
 <rooms>
   <room name='room31' walkableMap='room31map' mapScale='2' width='715' height='618'>
     <sprite name='room31BG'><animation sheet='room31bg' x='0' y='0'/></sprite>
+    <sprite name='secretTC' x='357.0' y='204.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Talk'><args>@! /0x2b0057WoAh MaN hOw DiD yOu EvEn GeT iN hErE iT&#x27;s LiKe SoMe SoRt Of MiRaClE...</args></action></sprite>
   </room>
 </rooms>
 </sburb>

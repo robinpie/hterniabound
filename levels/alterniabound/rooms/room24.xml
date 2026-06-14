@@ -7,6 +7,10 @@
 <rooms>
   <room name='room24' walkableMap='room24map' mapScale='2' width='1786' height='1777'>
     <sprite name='room24BG'><animation sheet='room24bg' x='0' y='0'/></sprite>
+    <sprite name='transFutureTrans8' x='1317.0' y='1509.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room23.xml,room23,672,2907</args></action></sprite>
+    <sprite name='jarFutureTrans' x='1122.0' y='984.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room23.xml,room23,1632,-171</args></action></sprite>
+    <sprite name='transFutureChest' x='351.0' y='285.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a DRAWING TABLET!</args></action></sprite>
+    <sprite name='transLabWandPile' x='162.0' y='102.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine pile of shitty wands.'><args>@! At least someone has the decency to keep his trash tucked away.@! Take nap in pile of shitty wands?</args></action></sprite>
   </room>
 </rooms>
 </sburb>

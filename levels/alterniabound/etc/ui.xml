@@ -1,5 +1,4 @@
 <sburb description='alterniabound ui'>
-
 <assets>
   <asset name='SburbFont' type='font'>
     local:Courier New Bold,
@@ -9,14 +8,132 @@
     weight:bold
   </asset>
   <asset name='dialogBox' type='graphic'>interface/boxes/dialogBoxBig.png</asset>
+  <asset name='zoom9' type='graphic'>cutscenes/zoom9.png</asset>
+  <asset name='zoom10' type='graphic'>cutscenes/zoom10.png</asset>
+  <asset name='zoom11' type='graphic'>cutscenes/zoom11.png</asset>
+  <asset name='zoom12' type='graphic'>cutscenes/zoom12.png</asset>
+  <asset name='AAIdle' type='graphic'>dialogs/AAIdle.png</asset>
+  <asset name='AATalk' type='graphic'>dialogs/AATalk.png</asset>
+  <asset name='AABored' type='graphic'>dialogs/AABored.png</asset>
+  <asset name='AAInsane' type='graphic'>dialogs/AAInsane.png</asset>
+  <asset name='GCIdle' type='graphic'>dialogs/GCIdle.png</asset>
+  <asset name='GCTalk' type='graphic'>dialogs/GCTalk.png</asset>
+  <asset name='GCRancorous' type='graphic'>dialogs/GCRancorous.png</asset>
+  <asset name='GCPassive' type='graphic'>dialogs/GCPassive.png</asset>
+  <asset name='GCQuestion' type='graphic'>dialogs/GCQuestion.png</asset>
+  <asset name='GCChummy' type='graphic'>dialogs/GCChummy.png</asset>
+  <asset name='DCIdle' type='graphic'>dialogs/DCIdle.png</asset>
+  <asset name='DCTalk' type='graphic'>dialogs/DCTalk.png</asset>
+  <asset name='AGIdle' type='graphic'>dialogs/AGIdle.png</asset>
+  <asset name='AGTalk' type='graphic'>dialogs/AGTalk.png</asset>
+  <asset name='AGVain' type='graphic'>dialogs/AGVain.png</asset>
+  <asset name='AGMad' type='graphic'>dialogs/AGMad.png</asset>
+  <asset name='AGRancorous' type='graphic'>dialogs/AGRancorous.png</asset>
+  <asset name='CTIdle' type='graphic'>dialogs/CTIdle.png</asset>
+  <asset name='CTTalk' type='graphic'>dialogs/CTTalk.png</asset>
+  <asset name='CTSweat' type='graphic'>dialogs/CTSweat.png</asset>
+  <asset name='CTTalkSweat' type='graphic'>dialogs/CTTalkSweat.png</asset>
+  <asset name='CCIdle' type='graphic'>dialogs/CCIdle.png</asset>
+  <asset name='CCTalk' type='graphic'>dialogs/CCTalk.png</asset>
+  <asset name='CCMad' type='graphic'>dialogs/CCMad.png</asset>
+  <asset name='CCHappy' type='graphic'>dialogs/CCHappy.png</asset>
+  <asset name='CCDisappointed' type='graphic'>dialogs/CCDisappointed.png</asset>
+  <asset name='GAIdle' type='graphic'>dialogs/GAIdle.png</asset>
+  <asset name='GATalk' type='graphic'>dialogs/GATalk.png</asset>
+  <asset name='GADisgusted' type='graphic'>dialogs/GADisgusted.png</asset>
+  <asset name='GAMad' type='graphic'>dialogs/GAMad.png</asset>
+  <asset name='TCIdle' type='graphic'>dialogs/TCIdle.png</asset>
+  <asset name='TCTalk' type='graphic'>dialogs/TCTalk.png</asset>
+  <asset name='TCMiracles' type='graphic'>dialogs/TCMiracles.png</asset>
+  <asset name='TCInsane' type='graphic'>dialogs/TCInsane.png</asset>
+  <asset name='CGIdle' type='graphic'>dialogs/CGIdle.png</asset>
+  <asset name='CGTalk' type='graphic'>dialogs/CGTalk.png</asset>
+  <asset name='CGMad' type='graphic'>dialogs/CGMad.png</asset>
+  <asset name='CGRancorous' type='graphic'>dialogs/CGRancorous.png</asset>
+  <asset name='CGInsane' type='graphic'>dialogs/CGInsane.png</asset>
+  <asset name='CGJudge' type='graphic'>dialogs/CGJudge.png</asset>
+  <asset name='CGBlame' type='graphic'>dialogs/CGBlame.png</asset>
+  <asset name='CGPoint' type='graphic'>dialogs/CGPoint.png</asset>
+  <asset name='ACIdle' type='graphic'>dialogs/ACIdle.png</asset>
+  <asset name='ACTalk' type='graphic'>dialogs/ACTalk.png</asset>
+  <asset name='ACHappy' type='graphic'>dialogs/ACHappy.png</asset>
+  <asset name='ACCute' type='graphic'>dialogs/ACCute.png</asset>
+  <asset name='ACCheery' type='graphic'>dialogs/ACCheery.png</asset>
+  <asset name='CAIdle' type='graphic'>dialogs/CAIdle.png</asset>
+  <asset name='CATalk' type='graphic'>dialogs/CATalk.png</asset>
+  <asset name='CARancorous' type='graphic'>dialogs/CARancorous.png</asset>
+  <asset name='CASad' type='graphic'>dialogs/CASad.png</asset>
+  <asset name='ATIdle' type='graphic'>dialogs/ATIdle.png</asset>
+  <asset name='ATTalk' type='graphic'>dialogs/ATTalk.png</asset>
+  <asset name='ATSad' type='graphic'>dialogs/ATSad.png</asset>
+  <asset name='TAIdle' type='graphic'>dialogs/TAIdle.png</asset>
+  <asset name='TATalk' type='graphic'>dialogs/TATalk.png</asset>
 </assets>
-
+<classes>
+  <animation class='abDialog' frameInterval='6' x='-137' y='-345'/>
+</classes>
 <hud>
   <dialoger alertPos="56,120" talkPosRight="20,120" talkPosLeft="90,120" hiddenPos="-1000,120"
-    spriteStartLeft="-300,450" spriteEndLeft="100,450" spriteStartRight="950,450" spriteEndRight="550,450"
-    alertTextDimensions="30,30,450,220" leftTextDimensions="150,30,350,220" rightTextDimensions="30,30,350,220"
-    box="dialogBox">
-  </dialoger>
+    spriteStartLeft="-350,450" spriteEndLeft="150,450" spriteStartRight="1000,450" spriteEndRight="500,450"
+    alertTextDimensions="30,30,450,220" leftTextDimensions="160,30,340,220" rightTextDimensions="30,30,340,220"
+    box="dialogBox"></dialoger>
+  <dialogsprites>
+    <animation name='AAIdle' class='abDialog' sheet='AAIdle'/>
+    <animation name='AATalk' class='abDialog' sheet='AATalk'/>
+    <animation name='AABored' class='abDialog' sheet='AABored'/>
+    <animation name='AAInsane' class='abDialog' sheet='AAInsane'/>
+    <animation name='GCIdle' class='abDialog' sheet='GCIdle'/>
+    <animation name='GCTalk' class='abDialog' sheet='GCTalk'/>
+    <animation name='GCRancorous' class='abDialog' sheet='GCRancorous'/>
+    <animation name='GCPassive' class='abDialog' sheet='GCPassive'/>
+    <animation name='GCQuestion' class='abDialog' sheet='GCQuestion'/>
+    <animation name='GCChummy' class='abDialog' sheet='GCChummy'/>
+    <animation name='DCIdle' class='abDialog' sheet='DCIdle'/>
+    <animation name='DCTalk' class='abDialog' sheet='DCTalk'/>
+    <animation name='AGIdle' class='abDialog' sheet='AGIdle'/>
+    <animation name='AGTalk' class='abDialog' sheet='AGTalk'/>
+    <animation name='AGVain' class='abDialog' sheet='AGVain'/>
+    <animation name='AGMad' class='abDialog' sheet='AGMad'/>
+    <animation name='AGRancorous' class='abDialog' sheet='AGRancorous'/>
+    <animation name='CTIdle' class='abDialog' sheet='CTIdle'/>
+    <animation name='CTTalk' class='abDialog' sheet='CTTalk'/>
+    <animation name='CTSweat' class='abDialog' sheet='CTSweat'/>
+    <animation name='CTTalkSweat' class='abDialog' sheet='CTTalkSweat'/>
+    <animation name='CCIdle' class='abDialog' sheet='CCIdle'/>
+    <animation name='CCTalk' class='abDialog' sheet='CCTalk'/>
+    <animation name='CCMad' class='abDialog' sheet='CCMad'/>
+    <animation name='CCHappy' class='abDialog' sheet='CCHappy'/>
+    <animation name='CCDisappointed' class='abDialog' sheet='CCDisappointed'/>
+    <animation name='GAIdle' class='abDialog' sheet='GAIdle'/>
+    <animation name='GATalk' class='abDialog' sheet='GATalk'/>
+    <animation name='GADisgusted' class='abDialog' sheet='GADisgusted'/>
+    <animation name='GAMad' class='abDialog' sheet='GAMad'/>
+    <animation name='TCIdle' class='abDialog' sheet='TCIdle'/>
+    <animation name='TCTalk' class='abDialog' sheet='TCTalk'/>
+    <animation name='TCMiracles' class='abDialog' sheet='TCMiracles'/>
+    <animation name='TCInsane' class='abDialog' sheet='TCInsane'/>
+    <animation name='CGIdle' class='abDialog' sheet='CGIdle'/>
+    <animation name='CGTalk' class='abDialog' sheet='CGTalk'/>
+    <animation name='CGMad' class='abDialog' sheet='CGMad'/>
+    <animation name='CGRancorous' class='abDialog' sheet='CGRancorous'/>
+    <animation name='CGInsane' class='abDialog' sheet='CGInsane'/>
+    <animation name='CGJudge' class='abDialog' sheet='CGJudge'/>
+    <animation name='CGBlame' class='abDialog' sheet='CGBlame'/>
+    <animation name='CGPoint' class='abDialog' sheet='CGPoint'/>
+    <animation name='ACIdle' class='abDialog' sheet='ACIdle'/>
+    <animation name='ACTalk' class='abDialog' sheet='ACTalk'/>
+    <animation name='ACHappy' class='abDialog' sheet='ACHappy'/>
+    <animation name='ACCute' class='abDialog' sheet='ACCute'/>
+    <animation name='ACCheery' class='abDialog' sheet='ACCheery'/>
+    <animation name='CAIdle' class='abDialog' sheet='CAIdle'/>
+    <animation name='CATalk' class='abDialog' sheet='CATalk'/>
+    <animation name='CARancorous' class='abDialog' sheet='CARancorous'/>
+    <animation name='CASad' class='abDialog' sheet='CASad'/>
+    <animation name='ATIdle' class='abDialog' sheet='ATIdle'/>
+    <animation name='ATTalk' class='abDialog' sheet='ATTalk'/>
+    <animation name='ATSad' class='abDialog' sheet='ATSad'/>
+    <animation name='TAIdle' class='abDialog' sheet='TAIdle'/>
+    <animation name='TATalk' class='abDialog' sheet='TATalk'/>
+  </dialogsprites>
 </hud>
-
 </sburb>

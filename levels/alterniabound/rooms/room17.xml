@@ -9,6 +9,11 @@
     <sprite name='room17BG'><animation sheet='room17bg' x='0' y='0'/></sprite>
     <sprite name='randomLabDoor2' x='840.0' y='513.1' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room19.xml,room19,903,1002</args></action></sprite>
     <sprite name='randomLabDoor1' x='671.35' y='1067.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room17.xml,room17,714,150</args></action></sprite>
+    <sprite name='randomLabChest' x='717.0' y='573.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got the FLOURITE OCTET! @! Maybe you should keep these on you in the future.</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,748,482,182,61</args><action command='changeRoomRemote'><args>rooms/room19.xml,room19,903,1002</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,98,1036,1145,61</args><action command='changeRoomRemote'><args>rooms/room17.xml,room17,714,150</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

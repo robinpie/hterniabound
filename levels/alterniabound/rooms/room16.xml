@@ -7,7 +7,11 @@
 <rooms>
   <room name='room16' walkableMap='room16map' mapScale='2' width='924' height='1554'>
     <sprite name='room16BG'><animation sheet='room16bg' x='0' y='0'/></sprite>
+    <sprite name='monsterLabTrans' x='678.0' y='1428.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room16.xml,room16,105,915</args></action></sprite>
     <sprite name='monsterLabDoor' x='665.15' y='81.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room18.xml,room18,675,1002</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,92,50,1145,61</args><action command='changeRoomRemote'><args>rooms/room18.xml,room18,675,1002</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

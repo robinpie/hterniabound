@@ -8,6 +8,11 @@
   <room name='room19' walkableMap='room19map' mapScale='2' width='927' height='1017'>
     <sprite name='room19BG'><animation sheet='room19bg' x='0' y='0'/></sprite>
     <sprite name='shrineLabDoor' x='510.0' y='1044.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room21.xml,room21,510,360</args></action></sprite>
+    <sprite name='shrineLabChest2' x='942.0' y='498.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a WILD CONSORT!</args></action></sprite>
+    <sprite name='shrineLabChest1' x='414.0' y='492.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a BUST OF NICK CAGE! @! SWOOOOOOOON</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,418,1013,182,61</args><action command='changeRoomRemote'><args>rooms/room21.xml,room21,510,360</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

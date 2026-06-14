@@ -7,7 +7,17 @@
 <rooms>
   <room name='room15' walkableMap='room15map' mapScale='2' width='2844' height='1452'>
     <sprite name='room15BG'><animation sheet='room15bg' x='0' y='0'/></sprite>
+    <sprite name='controlLabTrans' x='105.0' y='915.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room17.xml,room17,678,1428</args></action></sprite>
     <sprite name='controlLabDoor' x='2652.15' y='662.6' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room15.xml,room15,921,1566</args></action></sprite>
+    <sprite name='controlLabChest3' x='744.0' y='849.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a FAIRY POSTER! @! Faaaaaaaake.</args></action></sprite>
+    <sprite name='controlLabChest2' x='1284.0' y='846.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got the FIDUSPEAR!</args></action></sprite>
+    <sprite name='controlLabChest1' x='2724.0' y='1224.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got TAVROS&#x27;S SEVERED LEGS! @! Why... @! Why would you keep these in a chest?</args></action></sprite>
+    <sprite name='controlLabJar' x='1032.0' y='1167.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine huge broken container.'><args>@! Looks like a terrible monster has escaped. Better be careful!@! Haha, yeah right. You&#x27;re gonna murder this thing if it crosses you.</args></action></sprite>
+    <sprite name='controlLabScreen1' x='409.8' y='851.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine equipment.'><args>@! A monitor with a map of some place on Alternia, displaying impact sites. It looks like it crashed and froze at some point during the reckoning.</args></action></sprite>
+    <sprite name='controlLabScreen2' x='1729.85' y='848.1' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine equipment.'><args>@! Another dodecascreen. Seem to be a lot of these things lying around.</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,2427,640,448,43</args><action command='changeRoomRemote'><args>rooms/room15.xml,room15,921,1566</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

@@ -7,7 +7,11 @@
 <rooms>
   <room name='room8' walkableMap='room8map' mapScale='2' width='801' height='1916'>
     <sprite name='room8BG'><animation sheet='room8bg' x='0' y='0'/></sprite>
+    <sprite name='jarLabTrans1' x='666.0' y='1728.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,1632,-171</args></action></sprite>
     <sprite name='jarLabDoor' x='669.0' y='180.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,333,1185</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,567,149,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,333,1185</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

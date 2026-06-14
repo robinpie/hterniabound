@@ -7,6 +7,8 @@
 <rooms>
   <room name='room22' walkableMap='room22map' mapScale='2' width='1786' height='3678'>
     <sprite name='room22BG'><animation sheet='room22bg' x='0' y='0'/></sprite>
+    <sprite name='hellFutureTrans1' x='672.0' y='2907.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room25.xml,room25,1317,1509</args></action></sprite>
+    <sprite name='hellFutureTrans5' x='1632.0' y='-171.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room24.xml,room24,666,1728</args></action></sprite>
   </room>
 </rooms>
 </sburb>

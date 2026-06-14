@@ -7,10 +7,20 @@
 <rooms>
   <room name='room9' walkableMap='room9map' mapScale='2' width='2526' height='1861'>
     <sprite name='room9BG'><animation sheet='room9bg' x='0' y='0'/></sprite>
+    <sprite name='GCLabTrans' x='927.0' y='1794.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room14.xml,room14,87,339</args></action></sprite>
     <sprite name='GCLabDoor' x='333.0' y='1237.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room9.xml,room9,669,231</args></action></sprite>
     <sprite name='GCLabDoorA' x='571.8' y='576.4' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room11.xml,room11,327,501</args></action></sprite>
     <sprite name='GCLabDoorB' x='1423.8' y='578.6' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room12.xml,room12,327,501</args></action></sprite>
     <sprite name='GCLabDoorC' x='2282.8' y='575.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room13.xml,room13,327,501</args></action></sprite>
+    <sprite name='GCLabChest3' x='1986.0' y='1605.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got your trusty DRAWING CHALK!</args></action></sprite>
+    <sprite name='GCLabChest2' x='1674.0' y='597.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got A FLARP MANUAL!</args></action></sprite>
+    <sprite name='GCLabChest1' x='1194.0' y='591.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got A WILD CONSORT!</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,277,1206,110,61</args><action command='changeRoomRemote'><args>rooms/room9.xml,room9,669,231</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,516,545,110,61</args><action command='changeRoomRemote'><args>rooms/room11.xml,room11,327,501</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,1368,547,110,61</args><action command='changeRoomRemote'><args>rooms/room12.xml,room12,327,501</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,2227,544,110,61</args><action command='changeRoomRemote'><args>rooms/room13.xml,room13,327,501</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

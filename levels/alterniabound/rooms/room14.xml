@@ -7,7 +7,12 @@
 <rooms>
   <room name='room14' walkableMap='room14map' mapScale='2' width='2679' height='1956'>
     <sprite name='room14BG'><animation sheet='room14bg' x='0' y='0'/></sprite>
+    <sprite name='webLabTrans' x='2478.0' y='534.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room3.xml,room3,1131,1509</args></action></sprite>
     <sprite name='webLabDoor' x='845.05' y='1643.3' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room16.xml,room16,2601,711</args></action></sprite>
+    <sprite name='webLabChest' x='2262.0' y='426.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a MAGIC 8 BALL!</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,620,1621,448,43</args><action command='changeRoomRemote'><args>rooms/room16.xml,room16,2601,711</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

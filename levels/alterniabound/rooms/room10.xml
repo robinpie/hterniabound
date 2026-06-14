@@ -7,7 +7,11 @@
 <rooms>
   <room name='room10' walkableMap='room10map' mapScale='2' width='667' height='615'>
     <sprite name='room10BG'><animation sheet='room10bg' x='0' y='0'/></sprite>
+    <sprite name='ALabTrans' x='330.0' y='285.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,705,2337</args></action></sprite>
     <sprite name='ALabDoor' x='327.0' y='540.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,570,660</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,225,509,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,570,660</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>
