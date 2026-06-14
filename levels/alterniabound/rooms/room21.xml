@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 21'>
+<assets>
+  <asset name='room21bg' type='graphic'>backgrounds/room21.png</asset>
+  <asset name='room21map' type='graphic'>maps/room21map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room21' walkableMap='room21map' mapScale='2' width='2526' height='1861'>
+    <sprite name='room21BG'><animation sheet='room21bg' x='0' y='0'/></sprite>
+    <sprite name='GCFutureDoor' x='333.0' y='1237.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room24.xml,room24,669,231</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 12'>
+<assets>
+  <asset name='room12bg' type='graphic'>backgrounds/room12.png</asset>
+  <asset name='room12map' type='graphic'>maps/room12map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room12' walkableMap='room12map' mapScale='2' width='667' height='615'>
+    <sprite name='room12BG'><animation sheet='room12bg' x='0' y='0'/></sprite>
+    <sprite name='CLabDoor' x='327.0' y='540.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,2282,660</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

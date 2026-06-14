@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 15'>
+<assets>
+  <asset name='room15bg' type='graphic'>backgrounds/room15.png</asset>
+  <asset name='room15map' type='graphic'>maps/room15map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room15' walkableMap='room15map' mapScale='2' width='2844' height='1452'>
+    <sprite name='room15BG'><animation sheet='room15bg' x='0' y='0'/></sprite>
+    <sprite name='controlLabDoor' x='2652.15' y='662.6' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room15.xml,room15,921,1566</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

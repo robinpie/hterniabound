@@ -1,0 +1,20 @@
+<sburb description='alterniabound room 3'>
+<assets>
+  <asset name='room3bg' type='graphic'>backgrounds/room3.png</asset>
+  <asset name='room3map' type='graphic'>maps/room3map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room3' walkableMap='room3map' mapScale='2' width='1022' height='2253'>
+    <sprite name='room3BG'><animation sheet='room3bg' x='0' y='0'/></sprite>
+    <sprite name='stairLabTrans1' x='885.0' y='417.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,525,981</args></action></sprite>
+    <sprite name='stairLabTrans2' x='363.0' y='1941.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room5.xml,room5,108,1254</args></action></sprite>
+    <sprite name='stairLabChest6' x='486.0' y='1857.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a BROKEN ROBOT PART!</args></action></sprite>
+    <sprite name='stairLabChest5' x='60.0' y='2190.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got the CROSBYTOP! @! Say, who the heck is this douche bag, anyway?</args></action></sprite>
+    <sprite name='stairLabChest4' x='879.0' y='1110.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a BEAUTIFUL MUSCLEBEAST NUDE! @! You feel culturally enriched by this masterpiece.</args></action></sprite>
+    <sprite name='stairLabChest3' x='795.0' y='1110.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a FAIRY POSTER! @! Lovely, albeit imaginary.</args></action></sprite>
+    <sprite name='stairLabChest2' x='144.0' y='531.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a CHAINSAW! @! Still some brown stains on it. Yuck.</args></action></sprite>
+    <sprite name='stairLabChest1' x='741.0' y='345.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got a BROKEN BOW AND ARROW!</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

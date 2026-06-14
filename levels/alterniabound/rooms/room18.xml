@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 18'>
+<assets>
+  <asset name='room18bg' type='graphic'>backgrounds/room18.png</asset>
+  <asset name='room18map' type='graphic'>maps/room18map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room18' walkableMap='room18map' mapScale='2' width='927' height='1005'>
+    <sprite name='room18BG'><animation sheet='room18bg' x='0' y='0'/></sprite>
+    <sprite name='boonLabDoor1' x='903.0' y='1041.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room18.xml,room18,840,573</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

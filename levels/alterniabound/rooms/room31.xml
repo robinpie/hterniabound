@@ -1,0 +1,12 @@
+<sburb description='alterniabound room 31'>
+<assets>
+  <asset name='room31bg' type='graphic'>backgrounds/room31.png</asset>
+  <asset name='room31map' type='graphic'>maps/room31map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room31' walkableMap='room31map' mapScale='2' width='715' height='618'>
+    <sprite name='room31BG'><animation sheet='room31bg' x='0' y='0'/></sprite>
+  </room>
+</rooms>
+</sburb>

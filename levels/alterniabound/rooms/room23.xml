@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 23'>
+<assets>
+  <asset name='room23bg' type='graphic'>backgrounds/room23.png</asset>
+  <asset name='room23map' type='graphic'>maps/room23map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room23' walkableMap='room23map' mapScale='2' width='801' height='1916'>
+    <sprite name='room23BG'><animation sheet='room23bg' x='0' y='0'/></sprite>
+    <sprite name='jarFutureDoor' x='669.0' y='180.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room22.xml,room22,333,1185</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

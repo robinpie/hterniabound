@@ -1,0 +1,16 @@
+<sburb description='alterniabound room 9'>
+<assets>
+  <asset name='room9bg' type='graphic'>backgrounds/room9.png</asset>
+  <asset name='room9map' type='graphic'>maps/room9map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room9' walkableMap='room9map' mapScale='2' width='2526' height='1861'>
+    <sprite name='room9BG'><animation sheet='room9bg' x='0' y='0'/></sprite>
+    <sprite name='GCLabDoor' x='333.0' y='1237.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room9.xml,room9,669,231</args></action></sprite>
+    <sprite name='GCLabDoorA' x='571.8' y='576.4' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room11.xml,room11,327,501</args></action></sprite>
+    <sprite name='GCLabDoorB' x='1423.8' y='578.6' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room12.xml,room12,327,501</args></action></sprite>
+    <sprite name='GCLabDoorC' x='2282.8' y='575.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room13.xml,room13,327,501</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

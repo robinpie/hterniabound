@@ -1,0 +1,22 @@
+<sburb description='alterniabound ui'>
+
+<assets>
+  <asset name='SburbFont' type='font'>
+    local:Courier New Bold,
+    local:Courier New,
+    url: fonts/cour.woff,
+    url: fonts/cour.ttf,
+    weight:bold
+  </asset>
+  <asset name='dialogBox' type='graphic'>interface/boxes/dialogBoxBig.png</asset>
+</assets>
+
+<hud>
+  <dialoger alertPos="56,120" talkPosRight="20,120" talkPosLeft="90,120" hiddenPos="-1000,120"
+    spriteStartLeft="-300,450" spriteEndLeft="100,450" spriteStartRight="950,450" spriteEndRight="550,450"
+    alertTextDimensions="30,30,450,220" leftTextDimensions="150,30,350,220" rightTextDimensions="30,30,350,220"
+    box="dialogBox">
+  </dialoger>
+</hud>
+
+</sburb>

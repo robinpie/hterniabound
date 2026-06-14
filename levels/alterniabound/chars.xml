@@ -1,0 +1,57 @@
+<sburb description='alterniabound characters'>
+<assets>
+  <asset name='aaSheet' type='graphic'>chars/aa.png</asset>
+  <asset name='acSheet' type='graphic'>chars/ac.png</asset>
+  <asset name='agSheet' type='graphic'>chars/ag.png</asset>
+  <asset name='atSheet' type='graphic'>chars/at.png</asset>
+  <asset name='caSheet' type='graphic'>chars/ca.png</asset>
+  <asset name='ccSheet' type='graphic'>chars/cc.png</asset>
+  <asset name='cgSheet' type='graphic'>chars/cg.png</asset>
+  <asset name='ctSheet' type='graphic'>chars/ct.png</asset>
+  <asset name='dcSheet' type='graphic'>chars/dc.png</asset>
+  <asset name='gaSheet' type='graphic'>chars/ga.png</asset>
+  <asset name='gcSheet' type='graphic'>chars/gc.png</asset>
+  <asset name='GirlSheet' type='graphic'>chars/Girl.png</asset>
+  <asset name='NerdSheet' type='graphic'>chars/Nerd.png</asset>
+  <asset name='NessSheet' type='graphic'>chars/Ness.png</asset>
+  <asset name='PooSheet' type='graphic'>chars/Poo.png</asset>
+  <asset name='taSheet' type='graphic'>chars/ta.png</asset>
+  <asset name='tcSheet' type='graphic'>chars/tc.png</asset>
+</assets>
+<classes>
+  <character class='aa' name='aa' sx='-36' sy='-87' sWidth='72' sHeight='87' width='36' height='20' sheet='aaSheet' state='walkFront' facing='Front'></character>
+  <action class='beaa' name='Be Aradia.' command='changeChar'><args>aa</args></action>
+  <character class='ac' name='ac' sx='-39' sy='-84' sWidth='81' sHeight='90' width='40' height='20' sheet='acSheet' state='walkFront' facing='Front'></character>
+  <action class='beac' name='Be Nepeta.' command='changeChar'><args>ac</args></action>
+  <character class='ag' name='ag' sx='-33' sy='-87' sWidth='69' sHeight='87' width='34' height='20' sheet='agSheet' state='walkFront' facing='Front'></character>
+  <action class='beag' name='Be Vriska.' command='changeChar'><args>ag</args></action>
+  <character class='at' name='at' sx='-48' sy='-84' sWidth='102' sHeight='90' width='51' height='20' sheet='atSheet' state='walkFront' facing='Front'></character>
+  <action class='beat' name='Be Tavros.' command='changeChar'><args>at</args></action>
+  <character class='ca' name='ca' sx='-36' sy='-87' sWidth='75' sHeight='96' width='37' height='20' sheet='caSheet' state='walkFront' facing='Front'></character>
+  <action class='beca' name='Be Eridan.' command='changeChar'><args>ca</args></action>
+  <character class='cc' name='cc' sx='-33' sy='-84' sWidth='63' sHeight='90' width='31' height='20' sheet='ccSheet' state='walkFront' facing='Front'></character>
+  <action class='becc' name='Be Feferi.' command='changeChar'><args>cc</args></action>
+  <character class='cg' name='cg' sx='-30' sy='-87' sWidth='66' sHeight='87' width='33' height='20' sheet='cgSheet' state='walkFront' facing='Front'></character>
+  <action class='becg' name='Be Karkat.' command='changeChar'><args>cg</args></action>
+  <character class='ct' name='ct' sx='-27' sy='-84' sWidth='57' sHeight='84' width='28' height='20' sheet='ctSheet' state='walkFront' facing='Front'></character>
+  <action class='bect' name='Be Equius.' command='changeChar'><args>ct</args></action>
+  <character class='dc' name='dc' sx='-45' sy='-90' sWidth='93' sHeight='102' width='46' height='20' sheet='dcSheet' state='walkFront' facing='Front'></character>
+  <action class='bedc' name='Be Sollux.' command='changeChar'><args>dc</args></action>
+  <character class='ga' name='ga' sx='-33' sy='-87' sWidth='63' sHeight='87' width='31' height='20' sheet='gaSheet' state='walkFront' facing='Front'></character>
+  <action class='bega' name='Be Kanaya.' command='changeChar'><args>ga</args></action>
+  <character class='gc' name='gc' sx='-45' sy='-84' sWidth='93' sHeight='93' width='46' height='20' sheet='gcSheet' state='walkFront' facing='Front'></character>
+  <action class='begc' name='Be Terezi.' command='changeChar'><args>gc</args></action>
+  <character class='Girl' name='Girl' sx='-22' sy='-72' sWidth='52' sHeight='72' width='26' height='20' sheet='GirlSheet' state='walkFront' facing='Front'></character>
+  <action class='beGirl' name='Be Girl.' command='changeChar'><args>Girl</args></action>
+  <character class='Nerd' name='Nerd' sx='-22' sy='-72' sWidth='48' sHeight='72' width='24' height='20' sheet='NerdSheet' state='walkFront' facing='Front'></character>
+  <action class='beNerd' name='Be Nerd.' command='changeChar'><args>Nerd</args></action>
+  <character class='Ness' name='Ness' sx='-22' sy='-72' sWidth='48' sHeight='72' width='24' height='20' sheet='NessSheet' state='walkFront' facing='Front'></character>
+  <action class='beNess' name='Be Ness.' command='changeChar'><args>Ness</args></action>
+  <character class='Poo' name='Poo' sx='-22' sy='-72' sWidth='52' sHeight='72' width='26' height='20' sheet='PooSheet' state='walkFront' facing='Front'></character>
+  <action class='bePoo' name='Be Poo.' command='changeChar'><args>Poo</args></action>
+  <character class='ta' name='ta' sx='-30' sy='-81' sWidth='63' sHeight='81' width='31' height='20' sheet='taSheet' state='walkFront' facing='Front'></character>
+  <action class='beta' name='Be Sollux.' command='changeChar'><args>ta</args></action>
+  <character class='tc' name='tc' sx='-40' sy='-93' sWidth='78' sHeight='95' width='39' height='20' sheet='tcSheet' state='walkFront' facing='Front'></character>
+  <action class='betc' name='Be Gamzee.' command='changeChar'><args>tc</args></action>
+</classes>
+</sburb>

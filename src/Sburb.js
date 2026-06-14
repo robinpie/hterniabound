@@ -198,6 +198,12 @@ Sburb.testCompatibility = function(div, levelName, includeDevTools) {
         } else if(Modernizr.vbarray && Modernizr.datauri) {
             Sburb.tests.loading = 12; // Load as god knows what, use IE hacks, convert to base 64 and generate Data URI
         }
+        // Opt-in override: ?rawload forces the simplest/most-robust raw-URL image
+        // loading path (loading=0), avoiding blob-URL revocation flakiness under
+        // heavy asset load. Default behaviour is unchanged.
+        if(typeof location != "undefined" && /[?&]rawload\b/.test(location.search)) {
+            Sburb.tests.loading = 0;
+        }
     }
 }
 

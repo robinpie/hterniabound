@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 19'>
+<assets>
+  <asset name='room19bg' type='graphic'>backgrounds/room19.png</asset>
+  <asset name='room19map' type='graphic'>maps/room19map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room19' walkableMap='room19map' mapScale='2' width='927' height='1017'>
+    <sprite name='room19BG'><animation sheet='room19bg' x='0' y='0'/></sprite>
+    <sprite name='shrineLabDoor' x='510.0' y='1044.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room21.xml,room21,510,360</args></action></sprite>
+  </room>
+</rooms>
+</sburb>

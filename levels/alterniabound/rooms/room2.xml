@@ -1,0 +1,13 @@
+<sburb description='alterniabound room 2'>
+<assets>
+  <asset name='room2bg' type='graphic'>backgrounds/room2.png</asset>
+  <asset name='room2map' type='graphic'>maps/room2map.png</asset>
+  <asset name='blank' type='graphic'>objects/blank.png</asset>
+</assets>
+<rooms>
+  <room name='room2' walkableMap='room2map' mapScale='2' width='1786' height='1777'>
+    <sprite name='room2BG'><animation sheet='room2bg' x='0' y='0'/></sprite>
+    <sprite name='transLabTrans1' x='1215.0' y='1239.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,525,345</args></action></sprite>
+  </room>
+</rooms>
+</sburb>
