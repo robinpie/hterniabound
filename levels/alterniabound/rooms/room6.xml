@@ -15,6 +15,7 @@
     <sprite name='ectoLabChest1' x='66.0' y='267.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>ectoLabChest1</args></action></sprite>
     <sprite name='ectoLabChest1Item' x='66.0' y='267.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='43' length='1'/></sprite>
     <sprite name='ectoLabEquip' x='776.45' y='237.6' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine equipment.'><args>@! You don&#x27;t even want to think about that day. Slime and wigglers... everywhere.</args></action></sprite>
+    <sprite name='ectoLabBabies' x='645.0' y='435.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='babiesIntro' name='So many horrible memories for Past Karkat...'></action></sprite>
   </room>
 </rooms>
 </sburb>

@@ -10,6 +10,8 @@
   <asset name='dialogBox' type='graphic'>interface/boxes/dialogBoxBig.png</asset>
   <asset name='soundControl' type='graphic'>interface/soundControl.png</asset>
   <asset name='resetControl' type='graphic'>interface/resetControl.png</asset>
+  <asset name='zoom6' type='graphic'>cutscenes/zoom6.png</asset>
+  <asset name='zoom8' type='graphic'>cutscenes/zoom8.png</asset>
   <asset name='zoom9' type='graphic'>cutscenes/zoom9.png</asset>
   <asset name='zoom10' type='graphic'>cutscenes/zoom10.png</asset>
   <asset name='zoom11' type='graphic'>cutscenes/zoom11.png</asset>

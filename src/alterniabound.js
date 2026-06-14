@@ -7,6 +7,9 @@ Sburb.AlterniaboundSongs = {"karkatsTheme": "resources/alterniabound/songs/Crust
 Sburb.AlterniaboundInitSong = "karkatsTheme";
 Sburb.AlterniaboundChests = {"genLabChest": "@! You got SOME GLASSES OF FRESH MILK!@! But... what is there to even get milk from around here?@! Oh sweet jegus...", "stairLabChest6": "@! You got a BROKEN ROBOT PART!", "stairLabChest5": "@! You got the CROSBYTOP!@! Say, who the heck is this douche bag, anyway?", "stairLabChest4": "@! You got a BEAUTIFUL MUSCLEBEAST NUDE!@! You feel culturally enriched by this masterpiece.", "stairLabChest3": "@! You got a FAIRY POSTER!@! Lovely, albeit imaginary.", "stairLabChest2": "@! You got a CHAINSAW!@! Still some brown stains on it. Yuck.", "stairLabChest1": "@! You got a BROKEN BOW AND ARROW!", "crossLabChest2": "@! You got the trusty CLAWSICKLE!", "crossLabChest1": "@! You got SOME BOONDOLLARS!@! Who cares.", "ectoLabChest2": "@! You got a... oh dear god.@! GET THAT FILTH OUTTA HERE", "ectoLabChest1": "@! You got a BOX OF FRUIT TROLLUPS!", "cliffLabChest8": "@! You got HOMES SMELL YA LATER!@! SO FRESH.", "cliffLabChest7": "@! You got a BEAUTIFUL WORK OF FINE ART!@! Just... why. Why would this exist.\n\nWhy would someone put it in a chest???", "cliffLabChest6": "@! You got a WICKED ELIXIR!@! You chug the beverage immediately. Your vitals remain unchanged.", "cliffLabChest5": "@! You got a TEAPOT!", "cliffLabChest4": "@! You got A WHOLE MESS OF BOONBUCKS!@! You guess you could use them as paperweights. Or something.", "cliffLabChest3": "@! You got a TINKERBULL PLUSH!@! R.I.P. little buddy. :'(", "cliffLabChest2": "@! You got a ~ATH MANUAL!@! It's so thick, you could kill someone with this thing.\n\nAnd if you master what's inside, you just might kill everyone with it.", "cliffLabChest1": "@! You got A WHOLE BOONBUCK!@! Yawn.", "roofFutureChest": "@! You got the DRAGONSUIT!@! You don your extremely stylish DRAGONSUIT. Now that stubborn Pouncellor will no longer have any excuse to withhold evidence critical to the case of the prosecution!", "GCLabChest3": "@! You got your trusty DRAWING CHALK!", "GCLabChest2": "@! You got A FLARP MANUAL!", "GCLabChest1": "@! You got A WILD CONSORT!", "hellLabChest12": "@! You got a GORGEOUS PIECE OF FINE ART.@! Absolutely breathtaking.", "hellLabChest11": "@! You got DEUCE CLUBS.@! Least deadly pair of juggling clubs in the universe.", "hellLabChest10": "@! You got the DEMONBANE RAGRIPPER!@! Deadliest chainsaw in the universe.", "hellLabChest9": "@! You got a BRAINFORK!@! For some reason you guys like to nab each others weapons and tuck them away in your own pivate chests. It's kind of silly. Seriously, what do you need this thing for??", "hellLabChest8": "@! You got LIKE 13 BOONDOLLARS OR SOMETHING.@! Whoop dee doo! You toss them into the abyss and make a wish.", "hellLabChest7": "@! You got THE ASSASSINATED CORPSE OF LIAISON PUMPKINSNUFFLE!@! Some bastard got to one of your key witnesses! The plot thickens.", "hellLabChest6": "@! You got a pair of ROCKET WINGS!@! PSWOOOOP!", "hellLabChest5": "@! You got a BEAGLE AEGIS!@! Wearing this, you are all but indestructible.", "hellLabChest4": "@! You got a MUSIC BOX TIME MACHINE!", "hellLabChest3": "@! You got a FAIRY POSTER!@! Yep, pretty much nothing that's not fake about fairies, that's for sure.", "hellLabChest2": "@! You got A BOONBUCK!@! How trivial it seems now compared to your fortune of boonbonds. You chuck it into the chasm below.", "hellLabChest1": "@! You got SON OF LEMONSNOUT!@! He smells no less sweet than the corrupt senator. And yet his lies... how they stink. The lemon never falls far from the tree!", "shrineLabChest2": "@! You got a WILD CONSORT!", "shrineLabChest1": "@! You got a BUST OF NICK CAGE!@! SWOOOOOOOON", "boonLabChest4": "@! You got a BROKEN 8 BALL!@! Very bad luck! Whatever. You'll just steal some more.", "boonLabChest3": "@! You got a CUTTLEFISH!", "boonLabChest2": "@! You got a pair of ROCKETBOOTS!", "boonLabChest1": "@! You got a HEAP OF FLARP MANUALS!", "randomLabChest": "@! You got the FLOURITE OCTET!@! Maybe you should keep these on you in the future.", "controlLabChest3": "@! You got a FAIRY POSTER!@! Faaaaaaaake.", "controlLabChest2": "@! You got the FIDUSPEAR!", "controlLabChest1": "@! You got TAVROS'S SEVERED LEGS!@! Why...@! Why would you keep these in a chest?", "webLabChest": "@! You got a MAGIC 8 BALL!", "transFutureChest": "@! You got a DRAWING TABLET!", "GCFutureChest4": "@! You got some GIFT ART FROM A COOL FRIEND!"};
 Sburb.AlterniaboundTimeTravel = {"Be Future Terezi?": {"room": 26, "x": 367, "y": 435}, "Be Future Vriska?": {"room": 21, "x": 367, "y": 435}, "Be Past Vriska?": {"room": 18, "x": 840, "y": 573}, "Be Past Terezi?": {"room": 2, "x": 525, "y": 345}};
+Sburb.AlterniaboundBabies = {"count": 176, "cellW": 260, "cellH": 180, "numCols": 14, "numRows": 13, "babiesCell": 38, "frameInterval": 2, "narration": "@! You are now Past Karkat. You are pretty much freaking the fuck out."};
+Sburb.AlterniaboundGameover = {"count": 52, "cellW": 325, "cellH": 225, "numCols": 8, "numRows": 7, "frameInterval": 2};
+Sburb.AlterniaboundBattle = {"count": 169, "cellW": 260, "cellH": 180, "numCols": 13, "numRows": 13, "idleCell": 20, "frameInterval": 2, "taunt": "@! You 8n't got your dice on you! SO STUPID!!!!!!!!"};
 
 // Talk to an NPC: pick dialogue based on the active character.
 // syntax: <npcName>
@@ -45,7 +48,30 @@ Sburb.commands.cutscene = function(info){
 		if(Sburb.abCutscene){
 			var img = Sburb.assets && Sburb.assets[Sburb.abCutscene.sheet];
 			if(img){ Sburb.stage.drawImage(img,0,0,Sburb.Stage.width,Sburb.Stage.height); }
-			if(!this.talking){ Sburb.abCutscene = null; }   // cutscene dialog ended
+			// dialog-linked gags clear when their dialog ends; startAnim overlays
+			// (persist) are torn down by their own space/click dismiss instead.
+			if(!this.talking && !Sburb.abCutscene.persist){ Sburb.abCutscene = null; }
+		}
+		// animated babies cutscene: draw the current sliced cell fullscreen.
+		if(Sburb.abBabies && Sburb.abBabiesImg && Sburb.abBabiesImg.complete){
+			var m=Sburb.AlterniaboundBabies, c=Sburb.abBabies.cell;
+			var sx=(c%m.numCols)*m.cellW, sy=Math.floor(c/m.numCols)*m.cellH;
+			Sburb.stage.drawImage(Sburb.abBabiesImg, sx,sy,m.cellW,m.cellH,
+			                      0,0,Sburb.Stage.width,Sburb.Stage.height);
+		}
+		// takeNap GAME OVER cutscene: same sliced-cell blit; holds on the last cell.
+		if(Sburb.abGameover && Sburb.abGameoverImg && Sburb.abGameoverImg.complete){
+			var gm=Sburb.AlterniaboundGameover, gc=Sburb.abGameover.cell;
+			var gsx=(gc%gm.numCols)*gm.cellW, gsy=Math.floor(gc/gm.numCols)*gm.cellH;
+			Sburb.stage.drawImage(Sburb.abGameoverImg, gsx,gsy,gm.cellW,gm.cellH,
+			                      0,0,Sburb.Stage.width,Sburb.Stage.height);
+		}
+		// Jack Noir luck-gank battle: same sliced-cell blit; holds on idleCell.
+		if(Sburb.abBattle && Sburb.abBattleImg && Sburb.abBattleImg.complete){
+			var tm=Sburb.AlterniaboundBattle, tc=Sburb.abBattle.cell;
+			var tsx=(tc%tm.numCols)*tm.cellW, tsy=Math.floor(tc/tm.numCols)*tm.cellH;
+			Sburb.stage.drawImage(Sburb.abBattleImg, tsx,tsy,tm.cellW,tm.cellH,
+			                      0,0,Sburb.Stage.width,Sburb.Stage.height);
 		}
 		_origDraw.call(this);
 	};
@@ -84,6 +110,211 @@ Sburb.commands.abTimeTravel = function(info){
 	Sburb.chooser.choices = [ new Sburb.Action("changeRoomRemote", dest, "Yes."),
 	                          new Sburb.Action("cancel", null, "No.") ];
 	Sburb.chooser.beginChoosing(Sburb.Stage.x+20, Sburb.Stage.y+50);
+};
+
+// ---- startAnim zoom cutscenes -------------------------------------------
+// Examining certain objects plays hud.zooms.gotoAndStop(N): a persistent
+// fullscreen zoom overlay, plus a song swap for N==3 (vriskaFast) and N==8
+// (nickRape) -- faithful to MainTimeline.as's startAnim case. The original
+// gates player movement while a zoom is up (zooms.currentFrame != 1); we mirror
+// that with Sburb.inputDisabled and dismiss the overlay on the next space/click.
+Sburb.abZoomDismiss = function(){
+	if(Sburb.abCutscene && Sburb.abCutscene.persist){
+		Sburb.abCutscene = null;
+		Sburb.inputDisabled = false;
+	}
+};
+Sburb.abShowZoom = function(n){
+	Sburb.abCutscene = { sheet:"zoom"+n, persist:true };
+	Sburb.inputDisabled = true;                        // freeze the player (moveNone)
+	if(n===3){ Sburb.abPlaySong("vriskaFast"); }
+	else if(n===8){ Sburb.abPlaySong("nickRape"); }
+	// space/enter dismiss: arm only once the selecting keypress has been released,
+	// so the same space that picked the menu option doesn't instantly close it.
+	var armed=false;
+	function poll(){
+		if(!Sburb.abCutscene || !Sburb.abCutscene.persist){ return; }
+		var down = Sburb.pressed && (Sburb.pressed[Sburb.Keys.space] || Sburb.pressed[Sburb.Keys.enter]);
+		if(!armed){ if(!down){ armed=true; } }
+		else if(down){ Sburb.abZoomDismiss(); return; }
+		requestAnimationFrame(poll);
+	}
+	requestAnimationFrame(poll);
+	// click dismiss: attached async so the click that opened the menu is not it.
+	setTimeout(function(){
+		var h=function(){ Sburb.abZoomDismiss(); window.removeEventListener("mousedown",h); };
+		window.addEventListener("mousedown",h);
+	},0);
+};
+// startAnim 3 is the animated Jack Noir battle (not a static zoom); 6/8 stay zooms.
+Sburb.commands.startAnim = function(info){
+	var n = parseInt(info,10);
+	if(n===3){ Sburb.abPlayBattle(); } else { Sburb.abShowZoom(n); }
+};
+
+// ---- Jack Noir luck-gank battle (examine monsterLabMonster as Vriska) ----
+// startAnim 3 -> battle plays START->IDLE (the standoff) and stops; at IDLE a
+// [Aggress, Steal] menu: Aggress loops the "no dice" taunt, Steal resumes the
+// animation IDLE->STEAL->VICTORY->EXIT1 -> the monster is robbed & removed and the
+// character theme returns. Faithful to MainTimeline startAnim 3 / monsterAnim /
+// the EXIT1 handler (puzzleSolved[17], removeChild monster, sChan=cSong).
+Sburb.abBattleImg = new Image();
+Sburb.abBattleImg.src = "resources/alterniabound/cutscenes/battle.png";  // preload, non-blocking
+Sburb.abBattle = null;
+Sburb.abBattleSolved = false;
+Sburb.abPlayBattle = function(){
+	var m = Sburb.AlterniaboundBattle; if(!m){ return; }
+	Sburb.abBattle = { cell:0, tick:0, phase:"enter" };
+	Sburb.inputDisabled = true;
+	Sburb.abPlaySong("vriskaFast");                 // Spider's Claw
+	function step(){
+		var b = Sburb.abBattle; if(!b){ return; }
+		if(b.phase==="enter"){
+			if(++b.tick >= m.frameInterval){ b.tick=0; b.cell++; }
+			if(b.cell >= m.idleCell){ b.cell = m.idleCell; b.phase = "idle"; Sburb.abBattleMenu(); }
+		} else if(b.phase==="steal"){
+			if(++b.tick >= m.frameInterval){ b.tick=0; b.cell++; }
+			if(b.cell >= m.count-1){ b.cell = m.count-1; Sburb.abBattleWin(); return; }
+		}
+		requestAnimationFrame(step);                 // idle: just holds on idleCell
+	}
+	requestAnimationFrame(step);
+};
+Sburb.abBattleMenu = function(){
+	if(!Sburb.chooser){ return; }
+	Sburb.inputDisabled = false;                    // allow chooser selection (movement still frozen while choosing)
+	Sburb.chooser.choices = [ new Sburb.Action("battleAggress", null, "Aggress"),
+	                          new Sburb.Action("battleSteal", null, "Steal") ];
+	Sburb.chooser.beginChoosing(Sburb.Stage.x+20, Sburb.Stage.y+50);
+};
+Sburb.commands.battleAggress = function(){
+	if(Sburb.dialoger){ Sburb.dialoger.startDialog(Sburb.AlterniaboundBattle.taunt); }
+	function wait(){                                // reopen the menu once the taunt is dismissed
+		if(Sburb.dialoger && Sburb.dialoger.talking){ requestAnimationFrame(wait); return; }
+		if(Sburb.abBattle && Sburb.abBattle.phase==="idle"){ Sburb.abBattleMenu(); }
+	}
+	requestAnimationFrame(wait);
+};
+Sburb.commands.battleSteal = function(){
+	if(!Sburb.abBattle){ return; }
+	Sburb.abBattle.phase = "steal"; Sburb.abBattle.tick = 0;
+	Sburb.inputDisabled = true;                     // freeze through the steal animation
+};
+Sburb.abBattleWin = function(){
+	Sburb.abBattle = null;
+	Sburb.inputDisabled = false;
+	Sburb.abBattleSolved = true;
+	var room = Sburb.curRoom;                        // remove the (now-robbed) monster hitbox
+	if(room){ for(var i=0;i<room.sprites.length;i++){
+		if(room.sprites[i].name==="monsterLabMonster"){ room.sprites.splice(i,1); break; } } }
+	var theme = Sburb.AlterniaboundSwapThemes[Sburb.char && Sburb.char.name] || Sburb.AlterniaboundInitSong;
+	Sburb.abPlaySong(theme);                         // sChan = cSong
+};
+
+// ---- "Be Past Karkat?" babies intro (startAnim 2) -----------------------
+// The heaviest cutscene: KarkatAnimBabies, a sliced fullscreen animation played
+// to its end, paused once at the BABIES cell for the "freaking out" narration.
+// Faithful to specialEvent renderChoices([["Yes","startAnim",2],["No","Cancel"]]).
+Sburb.abBabiesImg = new Image();
+Sburb.abBabiesImg.src = "resources/alterniabound/cutscenes/babies.png";  // preload, non-blocking
+Sburb.abBabies = null;
+Sburb.commands.babiesIntro = function(){
+	if(!Sburb.chooser){ return; }
+	Sburb.chooser.choices = [ new Sburb.Action("babiesPlay", null, "Yes"),
+	                          new Sburb.Action("cancel", null, "No") ];
+	Sburb.chooser.beginChoosing(Sburb.Stage.x+20, Sburb.Stage.y+50);
+};
+Sburb.commands.babiesPlay = function(){ Sburb.abPlayBabies(); };
+Sburb.abPlayBabies = function(){
+	var m = Sburb.AlterniaboundBabies; if(!m){ return; }
+	Sburb.abBabies = { cell:0, tick:0, narrated:false, narrating:false };
+	Sburb.inputDisabled = true;                     // freeze movement during playback
+	function step(){
+		var b = Sburb.abBabies; if(!b){ return; }
+		// pause at the BABIES cell: show narration, hold until it's dismissed
+		if(b.cell===m.babiesCell && !b.narrated){
+			if(!b.narrating){
+				b.narrating = true;
+				Sburb.inputDisabled = false;            // let Space advance the dialog
+				if(Sburb.dialoger){ Sburb.dialoger.startDialog(m.narration); }
+			} else if(Sburb.dialoger && !Sburb.dialoger.talking){
+				b.narrated = true; b.narrating = false;
+				Sburb.inputDisabled = true;             // re-freeze, resume animation
+			}
+			requestAnimationFrame(step); return;
+		}
+		if(++b.tick >= m.frameInterval){ b.tick = 0; b.cell++; }
+		if(b.cell >= m.count){                       // EXIT: tear down, restore control
+			Sburb.abBabies = null; Sburb.inputDisabled = false; return;
+		}
+		requestAnimationFrame(step);
+	}
+	requestAnimationFrame(step);
+};
+
+// ---- takeNap "GAME OVER" cutscene (transLabWandPile) --------------------
+// Examining the pile of shitty wands offers "Take nap...?"; confirming twice
+// (faithful to the AS3 double Yes/No: "Take nap?" -> "Are you sure? Might not be
+// such a hot idea." -> takeNap) plays hud.zooms.gotoAndStop(4): the GAME OVER
+// title resolves and holds, the napTime track (A Tender Moment) starts, and the
+// game dead-ends until the player hits Start Over. (MainTimeline.as takeNap case.)
+Sburb.abGameoverImg = new Image();
+Sburb.abGameoverImg.src = "resources/alterniabound/cutscenes/gameover.png";  // preload, non-blocking
+Sburb.abGameover = null;
+Sburb.commands.takeNapPrompt = function(){
+	if(!Sburb.chooser){ return; }
+	Sburb.chooser.choices = [ new Sburb.Action("takeNapConfirm", null, "Yes."),
+	                          new Sburb.Action("cancel", null, "No.") ];
+	Sburb.chooser.beginChoosing(Sburb.Stage.x+20, Sburb.Stage.y+50);
+};
+Sburb.commands.takeNapConfirm = function(){
+	// second confirm: show the warning line, then re-prompt once it's dismissed.
+	if(Sburb.dialoger){ Sburb.dialoger.startDialog("@! Are you sure? Might not be such a hot idea."); }
+	function wait(){
+		if(Sburb.dialoger && Sburb.dialoger.talking){ requestAnimationFrame(wait); return; }
+		if(!Sburb.chooser){ return; }
+		Sburb.chooser.choices = [ new Sburb.Action("takeNapPlay", null, "Yes."),
+		                          new Sburb.Action("cancel", null, "No.") ];
+		Sburb.chooser.beginChoosing(Sburb.Stage.x+20, Sburb.Stage.y+50);
+	}
+	requestAnimationFrame(wait);
+};
+Sburb.commands.takeNapPlay = function(){ Sburb.abPlayGameover(); };
+Sburb.abPlayGameover = function(){
+	var m = Sburb.AlterniaboundGameover; if(!m){ return; }
+	Sburb.abGameover = { cell:0, tick:0 };
+	Sburb.inputDisabled = true;                     // freeze while GAME OVER shows
+	Sburb.abPlaySong("napTime");                    // A Tender Moment
+	function step(){
+		var g = Sburb.abGameover; if(!g){ return; }
+		if(++g.tick >= m.frameInterval){ g.tick = 0; if(g.cell < m.count-1){ g.cell++; } }
+		if(g.cell >= m.count-1){ Sburb.abArmGameoverDismiss(); return; }  // hold on GAME OVER, await Space
+		requestAnimationFrame(step);
+	}
+	requestAnimationFrame(step);
+};
+// GAME OVER is a fake-out, not a dead end: at the PAUSE label, Space (or click)
+// resumes the MC and "wakes" the player -- AS3 keyDown case 4 teleports char to
+// (1215,1239) and restores the character theme (sChan = cSong). We arm the
+// dismiss only after the selecting keypress is released (so it doesn't auto-skip).
+Sburb.abGameoverDismiss = function(){
+	if(!Sburb.abGameover){ return; }
+	Sburb.abGameover = null;
+	Sburb.inputDisabled = false;
+	if(Sburb.char){ Sburb.char.x = 1215; Sburb.char.y = 1239; }   // wake-up spot
+	var theme = Sburb.AlterniaboundSwapThemes[Sburb.char && Sburb.char.name] || Sburb.AlterniaboundInitSong;
+	Sburb.abPlaySong(theme);
+};
+Sburb.abArmGameoverDismiss = function(){
+	var armed = false;
+	function poll(){
+		if(!Sburb.abGameover){ return; }
+		var down = Sburb.pressed && (Sburb.pressed[Sburb.Keys.space] || Sburb.pressed[Sburb.Keys.enter]);
+		if(!armed){ if(!down){ armed = true; } } else if(down){ Sburb.abGameoverDismiss(); return; }
+		requestAnimationFrame(poll);
+	}
+	requestAnimationFrame(poll);
+	setTimeout(function(){ var h=function(){ Sburb.abGameoverDismiss(); window.removeEventListener("mousedown",h); }; window.addEventListener("mousedown",h); }, 0);
 };
 
 // ---- Streaming background music ----------------------------------------

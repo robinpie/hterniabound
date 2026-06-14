@@ -14,6 +14,7 @@
     <sprite name='shrineLabChest2Item' x='942.0' y='498.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='41' length='1'/></sprite>
     <sprite name='shrineLabChest1' x='414.0' y='492.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>shrineLabChest1</args></action></sprite>
     <sprite name='shrineLabChest1Item' x='414.0' y='492.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='18' length='1'/></sprite>
+    <sprite name='shrineLabShrine' x='693.85' y='351.3' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='startAnim' name='Examine Cage shrine.'><args>8</args></action></sprite>
     <triggers>
     <trigger detonate='true'><args>inBox,char,418,1013,182,61</args><action command='changeRoomRemote'><args>rooms/room21.xml,room21,510,360</args></action></trigger>
     </triggers>
