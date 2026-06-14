@@ -3,6 +3,8 @@
   <asset name='room1bg' type='graphic'>backgrounds/room1.png</asset>
   <asset name='room1map' type='graphic'>maps/room1map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
+  <asset name='chest' type='graphic'>objects/chest.png</asset>
+  <asset name='chestItems' type='graphic'>objects/chestItems.png</asset>
 </assets>
 <rooms>
   <room name='room1' walkableMap='room1map' mapScale='2' width='1048' height='1113'>
@@ -53,8 +55,10 @@
     <sprite name='crossLabTrans1' x='525.0' y='666.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room1.xml,room1,429,534</args></action></sprite>
     <sprite name='crossLabTrans2' x='525.0' y='345.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room3.xml,room3,1215,1239</args></action></sprite>
     <sprite name='crossLabTrans3' x='525.0' y='981.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room4.xml,room4,885,417</args></action></sprite>
-    <sprite name='crossLabChest2' x='837.0' y='672.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got the trusty CLAWSICKLE!</args></action></sprite>
-    <sprite name='crossLabChest1' x='225.0' y='672.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open Chest.'><args>@! You got SOME BOONDOLLARS! @! Who cares.</args></action></sprite>
+    <sprite name='crossLabChest2' x='837.0' y='672.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>crossLabChest2</args></action></sprite>
+    <sprite name='crossLabChest2Item' x='837.0' y='672.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='4' length='1'/></sprite>
+    <sprite name='crossLabChest1' x='225.0' y='672.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>crossLabChest1</args></action></sprite>
+    <sprite name='crossLabChest1Item' x='225.0' y='672.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='5' length='1'/></sprite>
   </room>
 </rooms>
 </sburb>

@@ -7,6 +7,7 @@
 <rooms>
   <room name='room20' walkableMap='room20map' mapScale='2' width='927' height='1005'>
     <sprite name='room20BG'><animation sheet='room20bg' x='0' y='0'/></sprite>
+    <sprite name='boonFutureDoor1' x='903.0' y='1041.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='abTimeTravel' name='Transportalize.'><args>Be Past Vriska?</args></action></sprite>
     <sprite name='boonLabDoor2' x='511.35' y='303.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room20.xml,room20,510,1002</args></action></sprite>
     <sprite name='boonFutureBoonPile' x='345.0' y='348.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine former boondollar pile.'><args>@! You gave all your money to John. Gotta keep him competitive with Dave! John will be the best human boy there is. You will make sure of it.</args></action></sprite>
     <triggers>

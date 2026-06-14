@@ -8,6 +8,8 @@
     weight:bold
   </asset>
   <asset name='dialogBox' type='graphic'>interface/boxes/dialogBoxBig.png</asset>
+  <asset name='soundControl' type='graphic'>interface/soundControl.png</asset>
+  <asset name='resetControl' type='graphic'>interface/resetControl.png</asset>
   <asset name='zoom9' type='graphic'>cutscenes/zoom9.png</asset>
   <asset name='zoom10' type='graphic'>cutscenes/zoom10.png</asset>
   <asset name='zoom11' type='graphic'>cutscenes/zoom11.png</asset>
@@ -73,6 +75,12 @@
   <animation class='abDialog' frameInterval='6' x='-137' y='-345'/>
 </classes>
 <hud>
+  <spritebutton name='soundButton' x='12' y='12' width='62' height='43' sheet='soundControl'>
+    <action command='toggleVolume' silent='true'></action>
+  </spritebutton>
+  <spritebutton name='resetButton' x='9' y='417' width='21' height='21' sheet='resetControl'>
+    <action command='abReset' silent='true'></action>
+  </spritebutton>
   <dialoger alertPos="56,120" talkPosRight="20,120" talkPosLeft="90,120" hiddenPos="-1000,120"
     spriteStartLeft="-350,450" spriteEndLeft="150,450" spriteStartRight="1000,450" spriteEndRight="500,450"
     alertTextDimensions="30,30,450,220" leftTextDimensions="160,30,340,220" rightTextDimensions="30,30,340,220"
