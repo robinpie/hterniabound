@@ -1,4 +1,5 @@
 Copyright (c) 2012, Aria Beingessner
+
 Copyright (c) 2026, robinpie
 
 Pertaining to the code:
