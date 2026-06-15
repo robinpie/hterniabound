@@ -3,18 +3,20 @@
   <asset name='room24bg' type='graphic'>backgrounds/room24.png</asset>
   <asset name='room24map' type='graphic'>maps/room24map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
-  <asset name='chest' type='graphic'>objects/chest.png</asset>
-  <asset name='chestItems' type='graphic'>objects/chestItems.png</asset>
 </assets>
 <rooms>
-  <room name='room24' walkableMap='room24map' mapScale='2' width='1786' height='1777'>
+  <room name='room24' walkableMap='room24map' mapScale='2' width='801' height='1916'>
     <sprite name='room24BG'><animation sheet='room24bg' x='0' y='0'/></sprite>
-    <sprite name='transFutureTrans8' x='1317.0' y='1509.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room23.xml,room23,672,2907</args></action></sprite>
-    <sprite name='jarFutureTrans' x='1122.0' y='984.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room23.xml,room23,1632,-171</args></action></sprite>
-    <sprite name='transFutureChest' x='351.0' y='285.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>transFutureChest</args></action></sprite>
-    <sprite name='transFutureChestItem' x='351.0' y='285.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='45' length='1'/></sprite>
-    <sprite name='transLabWandPile' x='162.0' y='102.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine pile of shitty wands.'><args>@! At least someone has the decency to keep his trash tucked away.</args></action><action command='takeNapPrompt' name='Take nap in pile of shitty wands?'></action></sprite>
-    <sprite name='transFutureTrans1' x='1215.0' y='1239.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='abTimeTravel' name='Transportalize'><args>Be Past Terezi?</args></action></sprite>
+    <sprite name='jarFutureDoor' x='669.0' y='180.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room22.xml,room22,333,1185</args></action></sprite>
+    <sprite name='jarLabJar1' x='666.0' y='1554.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine jarred fellow.'><args>@! Ok, seriously, why does this puzzle have to be here?</args></action></sprite>
+    <sprite name='jarLabJar2' x='666.0' y='1372.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine pickled clone.'><args>@! I mean really. What&#x27;s the point? Who the fuck isn&#x27;t going to figure this out?</args></action></sprite>
+    <sprite name='jarLabJar3' x='666.0' y='1176.5' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine slumbering agent.'><args>@! This just literally serves no purpose. Who designed this? Why??</args></action></sprite>
+    <sprite name='jarLabJar4' x='666.0' y='995.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine brined fetal carapacian.'><args>@! Ok, THERE. Puzzle solved. That was SO HARD.
+
+The lab technicians had too much time on their hands.</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,567,149,203,61</args><action command='changeRoomRemote'><args>rooms/room22.xml,room22,333,1185</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

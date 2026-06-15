@@ -3,19 +3,13 @@
   <asset name='room14bg' type='graphic'>backgrounds/room14.png</asset>
   <asset name='room14map' type='graphic'>maps/room14map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
-  <asset name='chest' type='graphic'>objects/chest.png</asset>
-  <asset name='chestItems' type='graphic'>objects/chestItems.png</asset>
 </assets>
 <rooms>
-  <room name='room14' walkableMap='room14map' mapScale='2' width='2679' height='1956'>
+  <room name='room14' walkableMap='room14map' mapScale='2' width='681' height='592'>
     <sprite name='room14BG'><animation sheet='room14bg' x='0' y='0'/></sprite>
-    <sprite name='webLabTrans' x='2478.0' y='534.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room3.xml,room3,1131,1509</args></action></sprite>
-    <sprite name='webLabDoor' x='845.05' y='1643.3' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room16.xml,room16,2601,711</args></action></sprite>
-    <sprite name='webLabChest' x='2262.0' y='426.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>webLabChest</args></action></sprite>
-    <sprite name='webLabChestItem' x='2262.0' y='426.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='12' length='1'/></sprite>
-    <triggers>
-    <trigger detonate='true'><args>inBox,char,620,1621,448,43</args><action command='changeRoomRemote'><args>rooms/room16.xml,room16,2601,711</args></action></trigger>
-    </triggers>
+    <sprite name='roofLabTrans' x='87.0' y='339.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room10.xml,room10,927,1794</args></action></sprite>
+    <sprite name='roofLabChest' x='577.0' y='483.0' width='150' height='150' depthing='1'><animation sheet='blank'/></sprite>
+    <sprite name='roofLabScope' x='475.8' y='290.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='startAnim' name='Take a whiff?'><args>6</args></action></sprite>
   </room>
 </rooms>
 </sburb>

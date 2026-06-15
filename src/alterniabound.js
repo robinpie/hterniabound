@@ -66,7 +66,7 @@ Sburb.commands.cutscene = function(info){
 			Sburb.stage.drawImage(Sburb.abGameoverImg, gsx,gsy,gm.cellW,gm.cellH,
 			                      0,0,Sburb.Stage.width,Sburb.Stage.height);
 		}
-		// Jack Noir luck-gank battle: same sliced-cell blit; holds on idleCell.
+		// monster luck-gank battle: same sliced-cell blit; holds on idleCell.
 		if(Sburb.abBattle && Sburb.abBattleImg && Sburb.abBattleImg.complete){
 			var tm=Sburb.AlterniaboundBattle, tc=Sburb.abBattle.cell;
 			var tsx=(tc%tm.numCols)*tm.cellW, tsy=Math.floor(tc/tm.numCols)*tm.cellH;
@@ -120,12 +120,16 @@ Sburb.commands.abTimeTravel = function(info){
 // that with Sburb.inputDisabled and dismiss the overlay on the next space/click.
 Sburb.abZoomDismiss = function(){
 	if(Sburb.abCutscene && Sburb.abCutscene.persist){
+		var n = Sburb.abCutscene.zoomNum;
 		Sburb.abCutscene = null;
 		Sburb.inputDisabled = false;
+		// zoom6 is roofLabScope's "Prospit's toast!" -- dismissing it as Terezi
+		// fires the specialEvent that opens roofLabChest (AS3 keyDown zooms case 6).
+		if(n===6 && Sburb.char && Sburb.char.name==="gc"){ Sburb.abProspitToast(); }
 	}
 };
 Sburb.abShowZoom = function(n){
-	Sburb.abCutscene = { sheet:"zoom"+n, persist:true };
+	Sburb.abCutscene = { sheet:"zoom"+n, persist:true, zoomNum:n };
 	Sburb.inputDisabled = true;                        // freeze the player (moveNone)
 	if(n===3){ Sburb.abPlaySong("vriskaFast"); }
 	else if(n===8){ Sburb.abPlaySong("nickRape"); }
@@ -146,13 +150,44 @@ Sburb.abShowZoom = function(n){
 		window.addEventListener("mousedown",h);
 	},0);
 };
-// startAnim 3 is the animated Jack Noir battle (not a static zoom); 6/8 stay zooms.
+// startAnim 3 is the animated monster battle (not a static zoom); 6/8 stay zooms.
 Sburb.commands.startAnim = function(info){
 	var n = parseInt(info,10);
 	if(n===3){ Sburb.abPlayBattle(); } else { Sburb.abShowZoom(n); }
 };
 
-// ---- Jack Noir luck-gank battle (examine monsterLabMonster as Vriska) ----
+// ---- "Be Future Terezi?" time-travel unlock (roofLabScope -> roofLabChest) --
+// The only dynamically-unlocked transform: examining roofLabScope as Terezi plays
+// zoom6, and dismissing it ("Prospit's toast!") opens the otherwise-inert
+// roofLabChest, attaching an "Examine chest." action that narrates the empty chest
+// then offers the jump to the future (room 26). Faithful to MainTimeline.as's
+// specialEvent("Prospit's toast!") splice into GC.actions (one-shot, gated to GC).
+Sburb.abProspitToastDone = false;
+Sburb.abProspitToast = function(){
+	// show the narration regardless; the chest only opens the first time.
+	if(Sburb.dialoger){ Sburb.dialoger.startDialog("@! Prospit's toast!"); }
+	if(Sburb.abProspitToastDone){ return; }
+	Sburb.abProspitToastDone = true;
+	var room = Sburb.curRoom; if(!room){ return; }
+	for(var i=0;i<room.sprites.length;i++){
+		if(room.sprites[i].name==="roofLabChest"){
+			// 4th arg gates the action to Terezi (char name "gc"), as in GC.actions.
+			room.sprites[i].addAction(new Sburb.Action("abRoofChest","","Examine chest.","gc"));
+			break;
+		}
+	}
+};
+// The injected chest examine: narrate, then (once dismissed) offer Be Future Terezi?
+Sburb.commands.abRoofChest = function(){
+	if(Sburb.dialoger){ Sburb.dialoger.startDialog("@! There's nothing in here! Perhaps in the future you will think of something important to put in here."); }
+	function wait(){
+		if(Sburb.dialoger && Sburb.dialoger.talking){ requestAnimationFrame(wait); return; }
+		Sburb.commands.abTimeTravel("Be Future Terezi?");
+	}
+	requestAnimationFrame(wait);
+};
+
+// ---- monster luck-gank battle (examine monsterLabMonster as Vriska) ----
 // startAnim 3 -> battle plays START->IDLE (the standoff) and stops; at IDLE a
 // [Aggress, Steal] menu: Aggress loops the "no dice" taunt, Steal resumes the
 // animation IDLE->STEAL->VICTORY->EXIT1 -> the monster is robbed & removed and the

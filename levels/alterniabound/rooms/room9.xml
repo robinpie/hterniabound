@@ -3,28 +3,14 @@
   <asset name='room9bg' type='graphic'>backgrounds/room9.png</asset>
   <asset name='room9map' type='graphic'>maps/room9map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
-  <asset name='chest' type='graphic'>objects/chest.png</asset>
-  <asset name='chestItems' type='graphic'>objects/chestItems.png</asset>
 </assets>
 <rooms>
-  <room name='room9' walkableMap='room9map' mapScale='2' width='2526' height='1861'>
+  <room name='room9' walkableMap='room9map' mapScale='2' width='801' height='1916'>
     <sprite name='room9BG'><animation sheet='room9bg' x='0' y='0'/></sprite>
-    <sprite name='GCLabTrans' x='927.0' y='1794.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room14.xml,room14,87,339</args></action></sprite>
-    <sprite name='GCLabDoor' x='333.0' y='1237.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room9.xml,room9,669,231</args></action></sprite>
-    <sprite name='GCLabDoorA' x='571.8' y='576.4' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room11.xml,room11,327,501</args></action></sprite>
-    <sprite name='GCLabDoorB' x='1423.8' y='578.6' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room12.xml,room12,327,501</args></action></sprite>
-    <sprite name='GCLabDoorC' x='2282.8' y='575.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room13.xml,room13,327,501</args></action></sprite>
-    <sprite name='GCLabChest3' x='1986.0' y='1605.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>GCLabChest3</args></action></sprite>
-    <sprite name='GCLabChest3Item' x='1986.0' y='1605.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='21' length='1'/></sprite>
-    <sprite name='GCLabChest2' x='1674.0' y='597.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>GCLabChest2</args></action></sprite>
-    <sprite name='GCLabChest2Item' x='1674.0' y='597.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='28' length='1'/></sprite>
-    <sprite name='GCLabChest1' x='1194.0' y='591.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>GCLabChest1</args></action></sprite>
-    <sprite name='GCLabChest1Item' x='1194.0' y='591.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='39' length='1'/></sprite>
+    <sprite name='jarLabTrans1' x='666.0' y='1728.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,1632,-171</args></action></sprite>
+    <sprite name='jarLabDoor' x='669.0' y='180.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,333,1185</args></action></sprite>
     <triggers>
-    <trigger detonate='true'><args>inBox,char,277,1206,110,61</args><action command='changeRoomRemote'><args>rooms/room9.xml,room9,669,231</args></action></trigger>
-    <trigger detonate='true'><args>inBox,char,516,545,110,61</args><action command='changeRoomRemote'><args>rooms/room11.xml,room11,327,501</args></action></trigger>
-    <trigger detonate='true'><args>inBox,char,1368,547,110,61</args><action command='changeRoomRemote'><args>rooms/room12.xml,room12,327,501</args></action></trigger>
-    <trigger detonate='true'><args>inBox,char,2227,544,110,61</args><action command='changeRoomRemote'><args>rooms/room13.xml,room13,327,501</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,567,149,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,333,1185</args></action></trigger>
     </triggers>
   </room>
 </rooms>

@@ -3,12 +3,20 @@
   <asset name='room22bg' type='graphic'>backgrounds/room22.png</asset>
   <asset name='room22map' type='graphic'>maps/room22map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
+  <asset name='chest' type='graphic'>objects/chest.png</asset>
+  <asset name='chestItems' type='graphic'>objects/chestItems.png</asset>
 </assets>
 <rooms>
-  <room name='room22' walkableMap='room22map' mapScale='2' width='1786' height='3678'>
+  <room name='room22' walkableMap='room22map' mapScale='2' width='2526' height='1861'>
     <sprite name='room22BG'><animation sheet='room22bg' x='0' y='0'/></sprite>
-    <sprite name='hellFutureTrans1' x='672.0' y='2907.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room25.xml,room25,1317,1509</args></action></sprite>
-    <sprite name='hellFutureTrans5' x='1632.0' y='-171.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room24.xml,room24,666,1728</args></action></sprite>
+    <sprite name='GCFutureTrans' x='927.0' y='1794.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room26.xml,room26,87,339</args></action></sprite>
+    <sprite name='GCFutureDoor' x='333.0' y='1237.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room24.xml,room24,669,231</args></action></sprite>
+    <sprite name='GCFutureChest4' x='1257.0' y='1602.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>GCFutureChest4</args></action></sprite>
+    <sprite name='GCFutureChest4Item' x='1257.0' y='1602.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='46' length='1'/></sprite>
+    <sprite name='GCFuturePC' x='335.0' y='588.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Open doors.'><args>@! The doors are jammed from overuse. That&#x27;s what you get for hording so much useless bullshit in your private chests!</args></action></sprite>
+    <triggers>
+    <trigger detonate='true'><args>inBox,char,277,1206,110,61</args><action command='changeRoomRemote'><args>rooms/room24.xml,room24,669,231</args></action></trigger>
+    </triggers>
   </room>
 </rooms>
 </sburb>

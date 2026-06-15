@@ -7,10 +7,10 @@
 <rooms>
   <room name='room12' walkableMap='room12map' mapScale='2' width='667' height='615'>
     <sprite name='room12BG'><animation sheet='room12bg' x='0' y='0'/></sprite>
-    <sprite name='CLabTrans' x='330.0' y='285.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,1332,831</args></action></sprite>
-    <sprite name='CLabDoor' x='327.0' y='540.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,2282,660</args></action></sprite>
+    <sprite name='BLabTrans' x='330.0' y='285.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,90,1599</args></action></sprite>
+    <sprite name='BLabDoor' x='327.0' y='540.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,1423,660</args></action></sprite>
     <triggers>
-    <trigger detonate='true'><args>inBox,char,225,509,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,2282,660</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,225,509,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,1423,660</args></action></trigger>
     </triggers>
   </room>
 </rooms>

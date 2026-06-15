@@ -3,26 +3,14 @@
   <asset name='room3bg' type='graphic'>backgrounds/room3.png</asset>
   <asset name='room3map' type='graphic'>maps/room3map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
-  <asset name='chest' type='graphic'>objects/chest.png</asset>
-  <asset name='chestItems' type='graphic'>objects/chestItems.png</asset>
 </assets>
 <rooms>
-  <room name='room3' walkableMap='room3map' mapScale='2' width='1022' height='2253'>
+  <room name='room3' walkableMap='room3map' mapScale='2' width='1786' height='1777'>
     <sprite name='room3BG'><animation sheet='room3bg' x='0' y='0'/></sprite>
-    <sprite name='stairLabTrans1' x='885.0' y='417.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,525,981</args></action></sprite>
-    <sprite name='stairLabTrans2' x='363.0' y='1941.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room5.xml,room5,108,1254</args></action></sprite>
-    <sprite name='stairLabChest6' x='486.0' y='1857.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>stairLabChest6</args></action></sprite>
-    <sprite name='stairLabChest6Item' x='486.0' y='1857.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='17' length='1'/></sprite>
-    <sprite name='stairLabChest5' x='60.0' y='2190.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>stairLabChest5</args></action></sprite>
-    <sprite name='stairLabChest5Item' x='60.0' y='2190.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='40' length='1'/></sprite>
-    <sprite name='stairLabChest4' x='879.0' y='1110.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>stairLabChest4</args></action></sprite>
-    <sprite name='stairLabChest4Item' x='879.0' y='1110.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='37' length='1'/></sprite>
-    <sprite name='stairLabChest3' x='795.0' y='1110.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>stairLabChest3</args></action></sprite>
-    <sprite name='stairLabChest3Item' x='795.0' y='1110.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='27' length='1'/></sprite>
-    <sprite name='stairLabChest2' x='144.0' y='531.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>stairLabChest2</args></action></sprite>
-    <sprite name='stairLabChest2Item' x='144.0' y='531.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='20' length='1'/></sprite>
-    <sprite name='stairLabChest1' x='741.0' y='345.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>stairLabChest1</args></action></sprite>
-    <sprite name='stairLabChest1Item' x='741.0' y='345.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='16' length='1'/></sprite>
+    <sprite name='transLabTrans1' x='1215.0' y='1239.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,525,345</args></action></sprite>
+    <sprite name='transLabTrans5' x='1515.0' y='1191.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room6.xml,room6,-465,1920</args></action></sprite>
+    <sprite name='transLabTrans8' x='1317.0' y='1509.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,672,2907</args></action></sprite>
+    <sprite name='transLabTrans9' x='1131.0' y='1512.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room15.xml,room15,2478,534</args></action></sprite>
   </room>
 </rooms>
 </sburb>

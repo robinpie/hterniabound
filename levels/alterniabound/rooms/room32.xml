@@ -1,12 +1,20 @@
-<sburb description='alterniabound room 31'>
+<sburb description='alterniabound room 32'>
 <assets>
-  <asset name='room31bg' type='graphic'>backgrounds/room31.png</asset>
-  <asset name='room31map' type='graphic'>maps/room31map.png</asset>
+  <asset name='room32bg' type='graphic'>backgrounds/room32.png</asset>
+  <asset name='room32map' type='graphic'>maps/room32map.png</asset>
   <asset name='blank' type='graphic'>objects/blank.png</asset>
 </assets>
 <rooms>
-  <room name='room31' walkableMap='room31map' mapScale='2' width='715' height='618'>
-    <sprite name='room31BG'><animation sheet='room31bg' x='0' y='0'/></sprite>
+  <room name='room32' walkableMap='room32map' mapScale='2' width='715' height='618'>
+    <sprite name='room32BG'><animation sheet='room32bg' x='0' y='0'/></sprite>
+    <character class='Girl' name='Girl' x='445' y='445' facing='Left' state='idleLeft'>
+    </character>
+    <character class='Nerd' name='Nerd' x='490' y='393' facing='Left' state='idleLeft'>
+    </character>
+    <character class='Ness' name='Ness' x='220' y='393' facing='Right' state='idleRight'>
+    </character>
+    <character class='Poo' name='Poo' x='268' y='438' facing='Right' state='idleRight'>
+    </character>
     <sprite name='secretTC' x='357.0' y='204.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Talk.'><args>@! WoAh MaN hOw DiD yOu EvEn GeT iN hErE iT&#x27;s LiKe SoMe SoRt Of MiRaClE...</args></action><action command='playSong' name='Play Karkat&#x27;s Theme'><args>karkatsTheme</args></action><action command='playSong' name='Play Terezi&#x27;s Theme'><args>terezisTheme</args></action><action command='playSong' name='Play Vriska&#x27;s Theme'><args>vriskasTheme</args></action><action command='playSong' name='Play Secret ROM'><args>secretRom</args></action><action command='playSong' name='Play Spider&#x27;s Claw'><args>vriskaFast</args></action><action command='playSong' name='Play Alterniabound'><args>alterniabound</args></action><action command='playSong' name='Play Megalovania'><args>megalovania</args></action><action command='playSong' name='Play Boy Skylark'><args>boyskylark</args></action><action command='playSong' name='Play Hero&#x27;s Growth'><args>herosgrowth</args></action><action command='playSong' name='Play Phrenic Phever'><args>phrenicphever</args></action><action command='playSong' name='Play Walk Stab Walk'><args>walkstabwalk</args></action><action command='playSong' name='Play Horschestra'><args>horschestra</args></action></sprite>
   </room>
 </rooms>
