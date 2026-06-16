@@ -9,6 +9,7 @@
     <sprite name='room21BG'><animation sheet='room21bg' x='0' y='0'/></sprite>
     <sprite name='boonFutureDoor1' x='903.0' y='1041.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='abTimeTravel' name='Transportalize.'><args>Be Past Vriska?</args></action></sprite>
     <sprite name='boonLabDoor2' x='511.35' y='303.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room20.xml,room20,510,1002</args></action></sprite>
+    <sprite name='boonFuturePC' x='314.0' y='384.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='solvePuzzleSimple' name='Unlock door.' sprite='ag'><args>21</args></action></sprite>
     <sprite name='boonFutureBoonPile' x='345.0' y='348.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine former boondollar pile.'><args>@! You gave all your money to John. Gotta keep him competitive with Dave! John will be the best human boy there is. You will make sure of it.</args></action></sprite>
     <triggers>
     <trigger detonate='true'><args>inBox,char,420,272,182,61</args><action command='changeRoomRemote'><args>rooms/room20.xml,room20,510,1002</args></action></trigger>

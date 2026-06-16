@@ -381,6 +381,163 @@ Sburb.abFixVolume = function(){
 Sburb.commands.playSong = function(info){ Sburb.abPlaySong(info.trim()); };
 Sburb.commands.songChange = Sburb.commands.playSong;
 
+// ---- Secret room (room32) reachability --------------------------------------
+// Faithful to AS3: a hidden Shift+T (or Ctrl+T) toggle warps you INTO the secret
+// room at (360,360) -- but only from normal play (no cutscene/chooser/dialog),
+// and never as the DC (Sollux dream-self). The original only warps IN on the
+// key; you LEAVE by walking out the bottom (curRoom==secretRoom && y>480 ->
+// room1 @ (360,360)). On entry it plays the ERROR sting then secretROM; we just
+// switch straight to secretRom (the room's defining loop) and restore the
+// active char's theme on exit.
+Sburb.abSecretRoom = "room32";
+Sburb.abEnterSecret = function(){
+	if(Sburb.loadingRoom || Sburb.abSecretBusy){ return; }
+	if(Sburb.abCutscene || (Sburb.chooser&&Sburb.chooser.choosing) || (Sburb.dialoger&&Sburb.dialoger.talking)){ return; }
+	if(!Sburb.curRoom || Sburb.curRoom.name===Sburb.abSecretRoom){ return; }
+	if(Sburb.char && Sburb.char.name==="dc"){ return; }
+	Sburb.abSecretBusy = true;
+	Sburb.performAction(new Sburb.Action("changeRoomRemote","rooms/room32.xml,"+Sburb.abSecretRoom+",360,360"));
+	Sburb.abPlaySong("secretRom");
+};
+Sburb.abExitSecret = function(){
+	if(Sburb.loadingRoom || Sburb.abSecretBusy){ return; }
+	Sburb.abSecretBusy = true;
+	Sburb.performAction(new Sburb.Action("changeRoomRemote","rooms/room1.xml,room1,360,360"));
+	var theme = (Sburb.AlterniaboundSwapThemes[Sburb.char && Sburb.char.name]) || Sburb.AlterniaboundInitSong;
+	Sburb.abPlaySong(theme);
+};
+(function(){
+	// entry: Shift+T / Ctrl+T. preventDefault so Ctrl+T doesn't open a browser tab.
+	window.addEventListener("keydown", function(e){
+		if(e.keyCode===84 && (e.shiftKey||e.ctrlKey)){
+			if(Sburb.curRoom && Sburb.curRoom.name!==Sburb.abSecretRoom){ e.preventDefault(); Sburb.abEnterSecret(); }
+		}
+	});
+	// exit watcher: walk out the bottom of the secret room.
+	function watch(){
+		if(!Sburb.abSecretBusy && Sburb.curRoom && Sburb.curRoom.name===Sburb.abSecretRoom
+		   && Sburb.char && Sburb.char.y>480){ Sburb.abExitSecret(); }
+		// clear the debounce once a room change has settled.
+		if(Sburb.abSecretBusy && !Sburb.loadingRoom){ Sburb.abSecretBusy = false; }
+		requestAnimationFrame(watch);
+	}
+	requestAnimationFrame(watch);
+})();
+
+// ---- Switch puzzles ("Solve Puzzle Simple") ---------------------------------
+// Flipping the owner-gated switch sets puzzleSolved[room] and opens that room's
+// secretPath corridor. In AS3 the path is a 2-frame sub-clip of the (invisible)
+// collision map: gotoAndStop(2) reveals floor where there was a gap. There's no
+// visible BG change, so we just make the region walkable -- the engine builds
+// room.mapData (R channel != 0 = walkable) from the static walkmap on every
+// Room.enter(), so we paint the secretPath rectangle in after each enter for any
+// solved room. Rectangles are the ffdec secretPath <use> bboxes in ROOM coords;
+// room coord -> walkmap px = /mapScale. puzzleId == room number.
+Sburb.abSolvedPuzzles = {};   // "room6" -> true (persists for the session)
+Sburb.AlterniaboundSecretPaths = {
+	room6:  {x:2178, y:1246, w:69,   h:1068},
+	room10: {x:380,  y:302,  w:1839, h:165},
+	room18: {x:564,  y:131,  w:129,  h:162},
+	room21: {x:235,  y:159,  w:129,  h:162}
+};
+Sburb.abApplySecretPath = function(room){
+	if(!room || !room.mapData || !room.walkableMap) { return; }
+	if(!Sburb.abSolvedPuzzles[room.name]) { return; }
+	var sp = Sburb.AlterniaboundSecretPaths[room.name]; if(!sp) { return; }
+	var w = room.walkableMap.width, h = room.walkableMap.height, sc = room.mapScale||1;
+	var x0=Math.floor(sp.x/sc), y0=Math.floor(sp.y/sc);
+	var x1=Math.ceil((sp.x+sp.w)/sc), y1=Math.ceil((sp.y+sp.h)/sc);
+	for(var py=y0; py<y1; py++){
+		if(py<0 || py>=h) { continue; }
+		for(var px=x0; px<x1; px++){
+			if(px<0 || px>=w) { continue; }
+			room.mapData[(px+py*w)*4] = 255;   // R channel -> walkable
+		}
+	}
+};
+(function(){
+	var _enter = Sburb.Room.prototype.enter;
+	Sburb.Room.prototype.enter = function(){ _enter.call(this); Sburb.abApplySecretPath(this); };
+})();
+Sburb.commands.solvePuzzleSimple = function(info){
+	var room = Sburb.curRoom; if(!room) { return; }
+	Sburb.abSolvedPuzzles[room.name] = true;   // key by the room the switch is in
+	Sburb.abApplySecretPath(room);
+};
+
+// ---- Jar push-puzzle (room9 jarLab) -----------------------------------------
+// Faithful to MainTimeline ~654: in room9 the 4 jarLabJar clips are pushable
+// horizontally. Walking into a jar's hitZone shoves it by the char's horizontal
+// motion (the char follows at half speed -- AS3 char.x -= round(vel.x/2)); the
+// jar clamps to [148,666] and snaps to the centre target 405 within 9px. (These
+// are map-local: AS3's frame-space range 409..927 / centre 666 minus room9's map
+// offset 261.) When all four sit at 405 the puzzle is solved (AS3 puzzleSolved[9]
+// + solvePuzzle = a DoorSound + a brief screen "gyration"; we have no SFX
+// pipeline so just the shake), after which the jars are pinned to centre. Jars
+// also block the char vertically (AS3 zeroes vel.y on contact) so you can't walk
+// through them. Driven by a rAF watcher reading the char's per-frame delta.
+Sburb.AlterniaboundJars = {room:"room9", target:405, min:148, max:666, snap:9,
+	halfW:43, yTop:-39, yBot:17,
+	names:["jarLabJar1","jarLabJar2","jarLabJar3","jarLabJar4"]};
+Sburb.abJarSolved = false;
+(function(){
+	var cfg = Sburb.AlterniaboundJars;
+	var prevX = null, prevY = null;
+	function jarSprite(name){
+		var r = Sburb.curRoom; if(!r){ return null; }
+		for(var i=0;i<r.sprites.length;i++){ if(r.sprites[i].name===name){ return r.sprites[i]; } }
+		return null;
+	}
+	function inHitZone(j,x,y){
+		return x>=j.x-cfg.halfW && x<=j.x+cfg.halfW && y>=j.y+cfg.yTop && y<=j.y+cfg.yBot;
+	}
+	function shake(){   // brief screen gyration on solve (cosmetic; AS3 hud jitter)
+		var cv = Sburb.Stage; if(!cv || !cv.style){ return; }
+		var n=0, max=14;
+		(function jit(){
+			if(n++>=max){ cv.style.transform=""; return; }
+			var g=(max-n)/2;
+			cv.style.transform="translate("+((Math.random()*2-1)*g).toFixed(1)+"px,"+((Math.random()*2-1)*g).toFixed(1)+"px)";
+			requestAnimationFrame(jit);
+		})();
+	}
+	function tick(){
+		var c = Sburb.char, r = Sburb.curRoom;
+		if(c && r && r.name===cfg.room){
+			if(Sburb.abJarSolved){
+				for(var i=0;i<cfg.names.length;i++){ var jp=jarSprite(cfg.names[i]); if(jp){ jp.x=cfg.target; } }
+			}else{
+				if(prevX===null){ prevX=c.x; prevY=c.y; }
+				var dx=c.x-prevX, dy=c.y-prevY, all=true;
+				for(var i=0;i<cfg.names.length;i++){
+					var j=jarSprite(cfg.names[i]);
+					if(!j){ all=false; continue; }
+					if((dx||dy) && inHitZone(j,c.x,c.y)){
+						if(dx){
+							// AS3: vel*=2/3, jar += vel, char -= vel/2 -> char & jar move
+							// in lockstep at 2/3 speed (contact held). On snap/clamp the
+							// jar locks and the char halts (char -= the reduced vel too).
+							var rv=Math.round(dx*2/3), pull=Math.round(rv/2);
+							var nx=j.x+rv, stop=false;
+							if(Math.abs(nx-cfg.target)<cfg.snap){ nx=cfg.target; stop=true; }
+							else if(nx<cfg.min){ nx=cfg.min; stop=true; }
+							else if(nx>cfg.max){ nx=cfg.max; stop=true; }
+							j.x=nx;
+							c.x = c.x - pull - (stop?rv:0);
+						}
+						if(dy){ c.y=prevY; }   // jars block vertical movement (AS3 vel.y=0)
+					}
+					if(j.x!==cfg.target){ all=false; }
+				}
+				if(all){ Sburb.abJarSolved=true; shake(); }
+			}
+			prevX=c.x; prevY=c.y;
+		}else{ prevX=null; prevY=null; }
+		requestAnimationFrame(tick);
+	}
+	requestAnimationFrame(tick);
+})();
+
 // HUD sound button: the engine's toggleVolume cycles Sburb.globalVolume
 // (1->0->0.33->0.66) in lock-step with the button's 4 icon states; extend it to
 // re-apply the volume to our streaming songs too (engine only fixes Sburb.bgm).
