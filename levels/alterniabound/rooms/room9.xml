@@ -15,10 +15,10 @@
 The lab technicians had too much time on their hands.</args></action></sprite>
     <sprite name='jarLabJar1' x='603' y='1547' width='86' height='150' depthing='1'><animation sheet='jarB' x='-54' y='-156'/><action command='talk' name='Examine jarred fellow.'><args>@! Ok, seriously, why does this puzzle have to be here?</args></action></sprite>
     <sprite name='jarLabJar2' x='210' y='1365' width='86' height='150' depthing='1'><animation sheet='jarW' x='-54' y='-162'/><action command='talk' name='Examine pickled clone.'><args>@! I mean really. What&#x27;s the point? Who the fuck isn&#x27;t going to figure this out?</args></action></sprite>
-    <sprite name='jarLabTrans1' x='405.0' y='1721.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,1632,-171</args></action></sprite>
-    <sprite name='jarLabDoor' x='408.0' y='173.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,333,1185</args></action></sprite>
+    <sprite name='jarLabTrans1' x='405.0' y='1721.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room8.xml,room8,1644,213</args></action></sprite>
+    <sprite name='jarLabDoor' x='408.0' y='173.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room10.xml,room10,206,1007</args></action></sprite>
     <triggers>
-    <trigger detonate='true'><args>inBox,char,306,142,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,333,1185</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,306,142,203,61</args><action command='changeRoomRemote'><args>rooms/room10.xml,room10,206,1007</args></action></trigger>
     </triggers>
   </room>
 </rooms>

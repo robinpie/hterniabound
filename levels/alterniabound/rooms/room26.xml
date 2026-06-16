@@ -9,10 +9,10 @@
 <rooms>
   <room name='room26' walkableMap='room26map' mapScale='2' width='681' height='592'>
     <sprite name='room26BG'><animation sheet='room26bg' x='0' y='0'/></sprite>
-    <sprite name='roofFutureTrans' x='87.0' y='339.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room22.xml,room22,927,1794</args></action></sprite>
-    <sprite name='roofFutureChest' x='577.0' y='483.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>roofFutureChest</args></action></sprite>
-    <sprite name='roofFutureChestItem' x='577.0' y='483.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='47' length='1'/></sprite>
-    <sprite name='roofFutureScope' x='475.8' y='290.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Take a whiff?'><args>@! The meteor has rotated. Derse is now within sniffing range.</args></action></sprite>
+    <sprite name='roofFutureTrans' x='105.0' y='366.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room22.xml,room22,800,1616</args></action></sprite>
+    <sprite name='roofFutureChest' x='595.0' y='510.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>roofFutureChest</args></action></sprite>
+    <sprite name='roofFutureChestItem' x='595.0' y='510.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='47' length='1'/></sprite>
+    <sprite name='roofFutureScope' x='493.8' y='317.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Take a whiff?'><args>@! The meteor has rotated. Derse is now within sniffing range.</args></action></sprite>
   </room>
 </rooms>
 </sburb>

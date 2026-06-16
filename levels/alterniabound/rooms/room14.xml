@@ -7,9 +7,9 @@
 <rooms>
   <room name='room14' walkableMap='room14map' mapScale='2' width='681' height='592'>
     <sprite name='room14BG'><animation sheet='room14bg' x='0' y='0'/></sprite>
-    <sprite name='roofLabTrans' x='87.0' y='339.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room10.xml,room10,927,1794</args></action></sprite>
-    <sprite name='roofLabChest' x='577.0' y='483.0' width='150' height='150' depthing='1'><animation sheet='blank'/></sprite>
-    <sprite name='roofLabScope' x='475.8' y='290.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='startAnim' name='Take a whiff?'><args>6</args></action></sprite>
+    <sprite name='roofLabTrans' x='105.0' y='366.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room10.xml,room10,800,1616</args></action></sprite>
+    <sprite name='roofLabChest' x='595.0' y='510.0' width='150' height='150' depthing='1'><animation sheet='blank'/></sprite>
+    <sprite name='roofLabScope' x='493.8' y='317.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='startAnim' name='Take a whiff?'><args>6</args></action></sprite>
   </room>
 </rooms>
 </sburb>

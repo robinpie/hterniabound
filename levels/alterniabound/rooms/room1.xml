@@ -50,7 +50,7 @@
     <character class='tc' name='tc' x='360' y='687' facing='Front' state='idleFront'>
       <action command='convo' name='Talk to Gamzee.'><args>tc</args></action>
     </character>
-    <sprite name='compLabTrans' x='429.0' y='534.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,525,666</args></action></sprite>
+    <sprite name='compLabTrans' x='429.0' y='534.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Transportalize.'><args>rooms/room2.xml,room2,524,666</args></action></sprite>
     <sprite name='compLabToys' x='713.95' y='699.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine host plush.'><args>@! Looks like SOMEONE needs to stop playing games for girls.</args></action></sprite>
     <sprite name='compLabUnicycle' x='575.95' y='412.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine UNIREAL AIR.'><args>@! It&#x27;s almost impossible to cross the room without tripping over this goddamn thing. The mess in here is unireal. I mean unreal.</args></action></sprite>
     <sprite name='compLabHorno' x='252.0' y='699.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine pile of shitty horns.'><args>@! Look at this shit all over the floor. Barely been here a couple hours and this dude turns the lab into his own personal clown sty.</args></action></sprite>

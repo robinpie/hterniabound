@@ -7,15 +7,15 @@
 <rooms>
   <room name='room24' walkableMap='room24map' mapScale='2' width='801' height='1916'>
     <sprite name='room24BG'><animation sheet='room24bg' x='0' y='0'/></sprite>
-    <sprite name='jarFutureDoor' x='669.0' y='180.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room22.xml,room22,333,1185</args></action></sprite>
-    <sprite name='jarLabJar1' x='666.0' y='1554.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine jarred fellow.'><args>@! Ok, seriously, why does this puzzle have to be here?</args></action></sprite>
-    <sprite name='jarLabJar2' x='666.0' y='1372.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine pickled clone.'><args>@! I mean really. What&#x27;s the point? Who the fuck isn&#x27;t going to figure this out?</args></action></sprite>
-    <sprite name='jarLabJar3' x='666.0' y='1176.5' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine slumbering agent.'><args>@! This just literally serves no purpose. Who designed this? Why??</args></action></sprite>
-    <sprite name='jarLabJar4' x='666.0' y='995.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine brined fetal carapacian.'><args>@! Ok, THERE. Puzzle solved. That was SO HARD.
+    <sprite name='jarFutureDoor' x='408.0' y='173.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room22.xml,room22,206,1007</args></action></sprite>
+    <sprite name='jarLabJar1' x='405.0' y='1547.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine jarred fellow.'><args>@! Ok, seriously, why does this puzzle have to be here?</args></action></sprite>
+    <sprite name='jarLabJar2' x='405.0' y='1365.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine pickled clone.'><args>@! I mean really. What&#x27;s the point? Who the fuck isn&#x27;t going to figure this out?</args></action></sprite>
+    <sprite name='jarLabJar3' x='405.0' y='1169.5' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine slumbering agent.'><args>@! This just literally serves no purpose. Who designed this? Why??</args></action></sprite>
+    <sprite name='jarLabJar4' x='405.0' y='988.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='talk' name='Examine brined fetal carapacian.'><args>@! Ok, THERE. Puzzle solved. That was SO HARD.
 
 The lab technicians had too much time on their hands.</args></action></sprite>
     <triggers>
-    <trigger detonate='true'><args>inBox,char,567,149,203,61</args><action command='changeRoomRemote'><args>rooms/room22.xml,room22,333,1185</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,306,142,203,61</args><action command='changeRoomRemote'><args>rooms/room22.xml,room22,206,1007</args></action></trigger>
     </triggers>
   </room>
 </rooms>

@@ -9,14 +9,14 @@
 <rooms>
   <room name='room18' walkableMap='room18map' mapScale='2' width='927' height='834'>
     <sprite name='room18BG'><animation sheet='room18bg' x='0' y='0'/></sprite>
-    <sprite name='randomLabDoor2' x='840.0' y='513.1' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room19.xml,room19,903,1002</args></action></sprite>
-    <sprite name='randomLabDoor1' x='671.35' y='1067.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room17.xml,room17,714,150</args></action></sprite>
-    <sprite name='randomLabPC' x='1040.0' y='586.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='solvePuzzleSimple' name='Open Doors' sprite='ag'><args>18</args></action></sprite>
-    <sprite name='randomLabChest' x='717.0' y='573.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>randomLabChest</args></action></sprite>
-    <sprite name='randomLabChestItem' x='717.0' y='573.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='23' length='1'/></sprite>
+    <sprite name='randomLabDoor2' x='627.0' y='230.10000000000002' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room19.xml,room19,691,954</args></action></sprite>
+    <sprite name='randomLabDoor1' x='458.35' y='784.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='changeRoomRemote' name='Enter.'><args>rooms/room17.xml,room17,502,150</args></action></sprite>
+    <sprite name='randomLabPC' x='827.0' y='303.0' width='150' height='150' depthing='1'><animation sheet='blank'/><action command='solvePuzzleSimple' name='Open Doors' sprite='ag'><args>18</args></action></sprite>
+    <sprite name='randomLabChest' x='504.0' y='290.0' width='150' height='150' depthing='1'><animation name='closed' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='1'/><animation name='open' sheet='chest' x='-111' y='-276' colSize='213' rowSize='301' startPos='0' length='16' frameInterval='2' loopNum='0'/><action command='openChest' name='Open Chest.'><args>randomLabChest</args></action></sprite>
+    <sprite name='randomLabChestItem' x='504.0' y='290.0' width='1' height='1' depthing='2'><animation name='hidden' sheet='blank'/><animation name='got' sheet='chestItems' x='-111' y='-276' colSize='213' rowSize='246' startPos='23' length='1'/></sprite>
     <triggers>
-    <trigger detonate='true'><args>inBox,char,748,482,182,61</args><action command='changeRoomRemote'><args>rooms/room19.xml,room19,903,1002</args></action></trigger>
-    <trigger detonate='true'><args>inBox,char,98,1036,1145,61</args><action command='changeRoomRemote'><args>rooms/room17.xml,room17,714,150</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,535,199,182,61</args><action command='changeRoomRemote'><args>rooms/room19.xml,room19,691,954</args></action></trigger>
+    <trigger detonate='true'><args>inBox,char,-114,753,1145,61</args><action command='changeRoomRemote'><args>rooms/room17.xml,room17,502,150</args></action></trigger>
     </triggers>
   </room>
 </rooms>
